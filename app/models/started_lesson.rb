@@ -1,0 +1,2 @@
+class StartedLesson < ApplicationRecord
+end

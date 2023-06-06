@@ -10,9 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_06_130015) do
+ActiveRecord::Schema[7.0].define(version: 202306061332255) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.string "content"
+    t.datetime "timestamp", precision: nil
+    t.bigint "user_id", null: false
+    t.bigint "post_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["post_id"], name: "index_comments_on_post_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "hints", force: :cascade do |t|
+    t.string "content"
+    t.bigint "lesson_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lesson_id"], name: "index_hints_on_lesson_id"
+  end
 
   create_table "lessons", force: :cascade do |t|
     t.bigint "track_id", null: false
@@ -24,6 +43,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_130015) do
     t.index ["track_id"], name: "index_lessons_on_track_id"
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.string "titlet"
+    t.string "content"
+    t.datetime "timestamp", precision: nil
+    t.bigint "user_id", null: false
+    t.bigint "lesson_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lesson_id"], name: "index_posts_on_lesson_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
   create_table "prompts", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "question"
@@ -31,6 +62,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_130015) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_prompts_on_user_id"
+  end
+
+  create_table "started_lessons", force: :cascade do |t|
+    t.boolean "status"
+    t.bigint "lesson_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lesson_id"], name: "index_started_lessons_on_lesson_id"
+    t.index ["user_id"], name: "index_started_lessons_on_user_id"
   end
 
   create_table "tracks", force: :cascade do |t|
@@ -50,6 +91,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_06_130015) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "comments", "posts"
+  add_foreign_key "comments", "users"
+  add_foreign_key "hints", "lessons"
   add_foreign_key "lessons", "tracks"
+  add_foreign_key "posts", "lessons"
+  add_foreign_key "posts", "users"
   add_foreign_key "prompts", "users"
+  add_foreign_key "started_lessons", "lessons"
+  add_foreign_key "started_lessons", "users"
 end
