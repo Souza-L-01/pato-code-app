@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   validates :email, presence: true, uniqueness: true
   validates :password, presence: true
-  validates :firstname, :lastname,  presence: true
+  # validates :firstname, :lastname, presence: true
   has_many :started_lessons, dependent: :destroy
   has_many :lessons, through: :started_lessons
   has_many :tracks ,through: :lessons

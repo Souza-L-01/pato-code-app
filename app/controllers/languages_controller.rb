@@ -1,9 +1,9 @@
 class LanguagesController < ApplicationController
   def index
-    @language = Language.all
+    @languages = Language.all
   end
 
   def show
-    @language = Language.find(:id)
+    @language = Language.find(params[:id])
   end
 end
