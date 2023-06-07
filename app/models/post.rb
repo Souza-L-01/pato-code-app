@@ -4,9 +4,9 @@ class Post < ActiveRecord
     has_many :comments, dependent: :destroy
     
     validates :content, presence: true
-    validades :title, presence: true
-    validades :timestamp, presence: true
-    validades :lesson_id, presence: true
+    validates :title, presence: true
+    validates :timestamp, presence: true
+    validates :lesson_id, presence: true
     validates :user_id, presence: true
     
     default_scope -> { order(created_at: :desc) }

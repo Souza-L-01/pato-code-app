@@ -7,5 +7,5 @@ class Lesson < ApplicationRecord
     validates :title, presence: true
     validates :content, presence: true
     validates :track_id, presence: true
-    validades :difficulty, presence: true
+    validates :difficulty, presence: true
 end
