@@ -1,3 +1,5 @@
 <% @languages.each do |language| %>
-  <%= link_to cl_image_tag('/images/CSS.png'), language_path(language) %>
+  <%= link_to cl_image_path image.key, height: 100, width: 100, crop: :fill, language_path(language) %>
+  <%= link_to cl_image_path image.key, height: 100, width: 100, crop: :fill, language_path(language) %>
+  <%= link_to cl_image_path image.key, height: 100, width: 100, crop: :fill, language_path(language) %>
 <% end %>
