@@ -33,6 +33,12 @@ ActiveRecord::Schema[7.0].define(version: 202306061332255) do
     t.index ["lesson_id"], name: "index_hints_on_lesson_id"
   end
 
+  create_table "languages", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "lessons", force: :cascade do |t|
     t.bigint "track_id", null: false
     t.string "title"
@@ -76,9 +82,10 @@ ActiveRecord::Schema[7.0].define(version: 202306061332255) do
 
   create_table "tracks", force: :cascade do |t|
     t.string "title"
-    t.string "language"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "language_id", null: false
+    t.index ["language_id"], name: "index_tracks_on_language_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -100,4 +107,5 @@ ActiveRecord::Schema[7.0].define(version: 202306061332255) do
   add_foreign_key "prompts", "users"
   add_foreign_key "started_lessons", "lessons"
   add_foreign_key "started_lessons", "users"
+  add_foreign_key "tracks", "languages"
 end
