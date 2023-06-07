@@ -1,4 +1,4 @@
-class Lesson < ApplicationRecord
+class Lesson < ActiveRecord::Base
     belongs_to :track
     has_many :started_lessons,  dependent: :destroy
     has_many :hints, dependent: :destroy

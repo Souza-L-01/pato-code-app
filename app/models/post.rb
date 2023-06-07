@@ -1,4 +1,4 @@
-class Post < ActiveRecord
+class Post < ActiveRecord::Base
     belongs_to :user
     belongs_to :lesson
     has_many :comments, dependent: :destroy
