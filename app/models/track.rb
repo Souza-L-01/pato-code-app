@@ -1,6 +1,6 @@
 class Track < ActiveRecord::Base
-    has_many :lessons
+  has_many :lessons
 
-    validates :title, presence:true
-    validates :language, presence: true
+  validates :title, presence:true
+  validates :language, presence: true
 end
