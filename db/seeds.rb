@@ -1,5 +1,9 @@
 
 puts "Cleaning database..."
+
+User.destroy_all
+Lesson.destroy_all
+Track.destroy_all
 Language.destroy_all
 
 puts "Creating languages..."
@@ -13,13 +17,12 @@ languages = [javascript, ruby, css, html]
 languages.each do |attributes|
   language = Language.create!(name: attributes[:name])
   file = File.open(attributes[:filepath])
-  language.image.attach(io: file, filename: "#{attributes[:name]}.svg", content_type: "image/svg+xml")
+  # language.image.attach(io: file, filename: "#{attributes[:name]}.svg", content_type: "image/svg+xml")
+  # commented line above to avoid error ActiveStorage::IntegrityError: Must supply api_key
   puts "Created #{language.name}"
 end
 puts "Finished!"
 
-User.destroy_all
-Lesson.destroy_all
 
 User.create!(email: "lunna@hotmail.com", password: "123456")
 
@@ -28,17 +31,17 @@ track_ruby1 = Track.create!(
   language: Language.find_by(name: "Ruby")
 )
 
-Track.create!(
+track_js1 = Track.create!(
   title: "JavaScript Basic",
   language: Language.find_by(name: "JavaScript")
 )
 
-Track.create!(
+track_css1 = Track.create!(
   title: "CSS Basic",
   language: Language.find_by(name: "CSS")
 )
 
-Track.create!(
+track_html1 = Track.create!(
   title: "HTML Basic",
   language: Language.find_by(name: "HTML")
 )
