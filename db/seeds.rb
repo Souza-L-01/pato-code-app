@@ -17,8 +17,7 @@ languages = [javascript, ruby, css, html]
 languages.each do |attributes|
   language = Language.create!(name: attributes[:name])
   file = File.open(attributes[:filepath])
-  # language.image.attach(io: file, filename: "#{attributes[:name]}.svg", content_type: "image/svg+xml")
-  # commented line above to avoid error ActiveStorage::IntegrityError: Must supply api_key
+  language.image.attach(io: file, filename: "#{attributes[:name]}.svg", content_type: "image/svg+xml")
   puts "Created #{language.name}"
 end
 puts "Finished!"
