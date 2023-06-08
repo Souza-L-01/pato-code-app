@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
   resources :tracks, only: [:index, :show]
 
-  resources :lessons, only: [:show] do
+  resources :lessons, only: [:index, :show, :create] do
     resources :posts, only: [:index, :show, :create]
   end
   resources :posts, only: [:delete] do
