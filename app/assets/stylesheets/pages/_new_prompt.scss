@@ -3,12 +3,13 @@
 //     src: url(http://dallas.no-ip.org/assets/PrintChar21.ttf) format("truetype");
 // }
 
-body {
+#background-prompt {
   font-size: 2px;
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFUlEQVQIW2NkYGD4D8SMjEACBP4DAA8oAgK5wqQTAAAAAElFTkSuQmCC);
   background-size: 2em 2em;
+  height: 250em;
   background-position: 0 0, 1em 0, 1em -1em, 0em 1em;
-//   font-family: Macintosh;
+  font-family: Macintosh;
   letter-spacing: -2px;
   font-smoothing: none;
 }
@@ -71,5 +72,5 @@ body {
 .explanation-textarea, .bug-textarea {
     width: 100%;
     height: 245px;
-    resize: vertical; /* Optional: Allow vertical resizing */
-  }
+    resize: vertical; 
+}
