@@ -3,5 +3,6 @@ class TracksController < ApplicationController
   end
 
   def show
+    
   end
 end
