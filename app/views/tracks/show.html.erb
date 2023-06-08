@@ -1,15 +1,17 @@
 <div class="d-flex justify-content-center align-items-center">
   <div class="lines"></div>
   <div class="title-wrapper px-4">
-    <h1><%= @track.title %></h1>
+    <h1 class="text-dark text-decoration-none"><%= @track.title %></h1>
   </div>
   <div class="lines"></div>
 </div>
 <% @lessons.each do |lesson| %>
   <div class="card mt-2">
-    <div class="card-body">
-      <h5 class="card-title"><%= lesson.title %></h5>
-      <p class="card-text">Difficulty: <%= lesson.difficulty %>/5</p>
-    </div>
+    <%= link_to lesson_path(lesson), class: 'text-decoration-none' do %>
+      <div class="card-body">
+        <h5 class="card-title text-dark text-decoration-none"><%= lesson.title %></h5>
+        <p class="card-text text-dark text-decoration-none">Difficulty: <%= lesson.difficulty %>/5</p>
+      </div>
+    <% end %>
   </div>
 <% end %>
