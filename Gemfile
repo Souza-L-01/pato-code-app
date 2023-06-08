@@ -8,7 +8,6 @@ gem "rails", "~> 7.0.5"
 
 gem "cloudinary"
 
-
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
