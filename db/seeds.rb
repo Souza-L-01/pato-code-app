@@ -24,22 +24,37 @@ puts "Finished!"
 User.create!(email: "lunna@hotmail.com", password: "123456")
 
 track_ruby1 = Track.create!(
-  title: "Ruby Basic",
+  title: "Ruby Basics",
+  language: Language.find_by(name: "Ruby")
+)
+
+track_ruby2 = Track.create!(
+  title: "Ruby Methods",
+  language: Language.find_by(name: "Ruby")
+)
+
+track_ruby3 = Track.create!(
+  title: "Ruby Functions",
+  language: Language.find_by(name: "Ruby")
+)
+
+track_ruby4 = Track.create!(
+  title: "Ruby Advanced",
   language: Language.find_by(name: "Ruby")
 )
 
 track_js1 = Track.create!(
-  title: "JavaScript Basic",
+  title: "JavaScript Basics",
   language: Language.find_by(name: "JavaScript")
 )
 
 Track.create!(
-  title: "CSS Basic",
+  title: "CSS Basics",
   language: Language.find_by(name: "CSS")
 )
 
 Track.create!(
-  title: "HTML Basic",
+  title: "HTML Basics",
   language: Language.find_by(name: "HTML")
 )
 

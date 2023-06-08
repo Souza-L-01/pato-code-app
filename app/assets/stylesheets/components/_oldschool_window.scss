@@ -1,4 +1,7 @@
-.window {
+.macwindow {
   background-color: white;
-  width: auto;
+  width: 100%;
+  height: fit-content;
+  --color-fore: black;
+  --color-back: white;
 }

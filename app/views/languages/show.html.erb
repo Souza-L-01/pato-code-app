@@ -1,1 +1,22 @@
-<%= @language.name %>
+<div class="d-flex justify-content-center align-items-center">
+  <div class="black-line"></div>
+  <h1><%= @language.name %></h1>
+  <div class="black-line"></div>
+</div>
+
+<div class="d-flex flex-wrap justify-content-center">
+  <% @tracks.each do |track| %>
+    <div class="col-3 mb-4">
+      <%= link_to language_track_path(track), class: 'link-dark' do %>
+        <div class="d-flex flex-column align-items-center">
+          <div>
+            <%= image_tag 'folder.svg' %>
+          </div>
+          <div>
+            <p><%= track.title %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
