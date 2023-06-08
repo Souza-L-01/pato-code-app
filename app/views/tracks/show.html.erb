@@ -1,2 +1,15 @@
-<h1>Tracks#show</h1>
-<p>Find me in app/views/tracks/show.html.erb</p>
+<div class="d-flex justify-content-center align-items-center">
+  <div class="lines"></div>
+  <div class="title-wrapper px-4">
+    <h1><%= @track.title %></h1>
+  </div>
+  <div class="lines"></div>
+</div>
+<% @lessons.each do |lesson| %>
+  <div class="card mt-2">
+    <div class="card-body">
+      <h5 class="card-title"><%= lesson.title %></h5>
+      <p class="card-text">Difficulty: <%= lesson.difficulty %>/5</p>
+    </div>
+  </div>
+<% end %>
