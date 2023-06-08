@@ -6,5 +6,6 @@ class LanguagesController < ApplicationController
 
   def show
     @language = Language.find(params[:id])
+    @tracks = @language.tracks
   end
 end

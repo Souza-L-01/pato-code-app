@@ -1,3 +1,15 @@
-<% @languages.each do |language| %>
-  <%= link_to cl_image_tag(language.image.key, size: '150x150', crop: :fit), language_path(language) %>
-<% end %>
+
+<div class="d-flex justify-content-start macwindow">
+  <div class="">
+    <% @languages.each do |language| %>
+      <div >
+        <div class="d-flex">
+          <%= link_to cl_image_tag(language.image.key, size: '250x250', crop: :fill), language_path(language) %>
+          <div class="align-self-end mb-5">
+            <h1><%= language.name %></h1>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

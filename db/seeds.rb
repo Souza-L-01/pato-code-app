@@ -1,4 +1,3 @@
-
 puts "Cleaning database..."
 
 User.destroy_all
@@ -10,7 +9,7 @@ puts "Creating languages..."
 javascript = { name: "JavaScript", filepath: File.join(__dir__, "icons/js-folder.svg") }
 ruby =  { name: "Ruby", filepath: File.join(__dir__, "icons/ruby-folder.svg") }
 css = { name: "CSS", filepath: File.join(__dir__, "icons/css-folder.svg") }
-html = { name: "HTML", filepath: File.join(__dir__, "icons/css-folder.svg") }
+html = { name: "HTML", filepath: File.join(__dir__, "icons/html-folder.svg") }
 
 languages = [javascript, ruby, css, html]
 
@@ -22,11 +21,10 @@ languages.each do |attributes|
 end
 puts "Finished!"
 
-
 User.create!(email: "lunna@hotmail.com", password: "123456")
 
 track_ruby1 = Track.create!(
-  title: "Ruby Basic",
+  title: "Ruby Basics",
   language: Language.find_by(name: "Ruby")
 )
 
@@ -45,6 +43,20 @@ track_html1 = Track.create!(
   language: Language.find_by(name: "HTML")
 )
 
+track_ruby2 = Track.create!(
+  title: "Ruby Methods",
+  language: Language.find_by(name: "Ruby")
+)
+
+track_ruby3 = Track.create!(
+  title: "Ruby Functions",
+  language: Language.find_by(name: "Ruby")
+)
+
+track_ruby4 = Track.create!(
+  title: "Ruby Advanced",
+  language: Language.find_by(name: "Ruby")
+)
 
 Lesson.create!(
   title: "Convert Minutes into Seconds",
