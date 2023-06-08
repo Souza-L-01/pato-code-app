@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :languages, only: %i[index show] do
     resources :tracks, only: %i[index show]
   end
-  resources :lessons, only: [:show] do
+  resources :lessons, only: [:index, :show, :create] do
     resources :posts, only: [:index, :show, :create]
   end
   resources :posts, only: [:delete] do
