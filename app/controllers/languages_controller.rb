@@ -1,5 +1,6 @@
 class LanguagesController < ApplicationController
   def index
+    @language = Language.includes(:image_attachment)
     @languages = Language.all
   end
 
