@@ -17,10 +17,12 @@ let iconAreaBounds, mouseDown, movingElement, iconOffsetX, iconOffsetY;
 
 iconAreaEl.addEventListener('mouseup', evt => {
   movingElement = null;
+  window.location.href = "lessons_path"
 });
 
 iconAreaEl.addEventListener('mouseleave', evt => {
   movingElement = null;
+  window.location.href = "lessons_path"
 });
 
 iconAreaEl.addEventListener('mousemove', evt => {
