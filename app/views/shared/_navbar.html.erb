@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag("patofix-logo.svg") %>
+      <%= image_tag("patofix-logo.svg", class: 'logo-nav') %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,15 +15,15 @@
             <%= link_to "Home", "#", class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <%= link_to "Lessons", "#", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <% if current_user.avatar.attached? %>
-                <%= image_tag("duck1ava.png", class: "avatar", alt: "dropdown menu") %>
+                <%= image_tag("duck1ava.png", class: "avatar-bordered", alt: "dropdown menu") %>
                 <%# current_user.avatar.key %>
               <% else %>
-                <%= image_tag("duck1ava.png", class: "avatar", alt: "dropdown menu") %>
+                <%= image_tag("duck1ava.png", class: "avatar-bordered", alt: "dropdown menu") %>
               <% end %>
             </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -41,3 +41,4 @@
     </div>
   </div>
 </div>
+
