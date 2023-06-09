@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :lessons, only: [:index, :show, :create] do
     collection do
       get 'search'
-    end  
+    end
     resources :posts, only: [:index, :show, :create]
   end
   resources :posts, only: [:destroy] do
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   # resources :prompts, only: [ :generate_text ]
 
   resources :prompts, only: [:new, :create] do
-    collection do 
+    collection do
       get :generate_text
       post :generate_text
     end
