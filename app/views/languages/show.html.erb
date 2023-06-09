@@ -1,9 +1,10 @@
 <div class="d-flex justify-content-center align-items-center">
-  <div class="black-line"></div>
-  <h1><%= @language.name %></h1>
-  <div class="black-line"></div>
+  <div class="lines"></div>
+  <div class="title-wrapper px-4">
+    <h1><%= @language.name %></h1>
+  </div>
+  <div class="lines"></div>
 </div>
-
 <div class="d-flex flex-wrap justify-content-center">
   <% @tracks.each do |track| %>
     <div class="col-3 mb-4">

@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#landing"
 
   resources :languages, only: %i[index show] do
-    resources :tracks, only: %i[index show]
+    resources :tracks, only: %i[show]
   end
   resources :lessons, only: [:show] do
     resources :posts, only: [:index, :show, :create]
