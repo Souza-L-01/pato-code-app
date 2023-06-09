@@ -2,15 +2,16 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url('//db.onlinewebfonts.com/c/1a243397695904f6f56e490ffd77a9cb?family=ChicagoFLF');
 
-
+$terminal-font: "Terminal Grotesque";
+$chicago-font: "ChicagoFLF";
 // Define fonts for body and headers
 // $body-font: "Work Sans", "Helvetica", "sans-serif";
 //define font for headers ChicagoFLF for H0 and H4
 $body-font: $terminal-font, "Helvetica", "sans-serif";
-$headers-font: $ChicagoFLF, "Helvetica", "sans-serif";
+$headers-font: $chicago-font, "Helvetica", "sans-serif";
 
 @font-face {
-  font-family: 'terminal_grotesque';
+  font-family: $terminal-font;
   src: url('terminal-grotesque-webfont.eot');
   src: url('terminal-grotesque-webfont.eot?#iefix') format('embedded-opentype'),
        url('terminal-grotesque-webfont.woff2') format('woff2'),
@@ -21,10 +22,9 @@ $headers-font: $ChicagoFLF, "Helvetica", "sans-serif";
   font-style: normal;
 
 }
-$terminal-font: "Terminal Grotesque";
 
 @font-face {
-  font-family: "ChicagoFLF";
+  font-family: $chicago-font;
   src: url("//db.onlinewebfonts.com/t/1a243397695904f6f56e490ffd77a9cb.eot");
   src: url("//db.onlinewebfonts.com/t/1a243397695904f6f56e490ffd77a9cb.eot?#iefix") format("embedded-opentype"),
   url("//db.onlinewebfonts.com/t/1a243397695904f6f56e490ffd77a9cb.woff2") format("woff2"),
@@ -32,4 +32,3 @@ $terminal-font: "Terminal Grotesque";
   url("//db.onlinewebfonts.com/t/1a243397695904f6f56e490ffd77a9cb.ttf") format("truetype"),
   url("//db.onlinewebfonts.com/t/1a243397695904f6f56e490ffd77a9cb.svg#ChicagoFLF") format("svg");
 }
-$chicago-font: "ChicagoFLF";

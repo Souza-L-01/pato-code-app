@@ -24,7 +24,13 @@ puts "Finished!"
 puts "Creating user"
 
 user = User.create!(email: "lunna@hotmail.com", password: "123456")
-# user.avatar.attach(io: file, filename: "js-folder.svg", content_type: "image/svg+xml")
+
+unless user.avatar.attached?
+  default_avatars = ['avatar1.png', 'avatar2.png', 'avatar3.png']
+  random_avatar = default_avatars.sample
+  file = File.open(File.join(__dir__, "avatars", random_avatar))
+  user.avatar.attach(io: file, filename: random_avatar)
+end
 
 puts "Created #{user.email}"
 
