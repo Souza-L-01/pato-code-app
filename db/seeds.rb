@@ -21,7 +21,14 @@ languages.each do |attributes|
 end
 puts "Finished!"
 
-User.create!(email: "lunna@hotmail.com", password: "123456")
+puts "Creating user"
+
+user = User.create!(email: "lunna@hotmail.com", password: "123456")
+# user.avatar.attach(io: file, filename: "js-folder.svg", content_type: "image/svg+xml")
+
+puts "Created #{user.email}"
+
+puts "Creating tracks"
 
 track_ruby1 = Track.create!(
   title: "Ruby Basics",
@@ -58,6 +65,10 @@ Track.create!(
   language: Language.find_by(name: "HTML")
 )
 
+puts "Created tracks"
+
+puts "Creating lessons"
+
 Lesson.create!(
   title: "Convert Minutes into Seconds",
   content: "def convert(minutes) return minutes * 60; end",
@@ -89,3 +100,5 @@ Lesson.create!(
   difficulty: 1,
   track_id: track_js1.id
 )
+
+puts "Lessons created"
