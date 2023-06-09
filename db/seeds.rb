@@ -27,7 +27,19 @@ puts 'Seeding completed successfully'
 # puts "Cleaning database..."
 # Language.destroy_all
 
-User.create!(email: "lunna@hotmail.com", password: "123456")
+puts "Creating user"
+
+user = User.create!(email: "lunna@hotmail.com", password: "123456")
+
+unless user.avatar.attached?
+  default_avatar = "duck1ava.png"
+  file = File.open(File.join(__dir__, "icons/", default_avatar))
+  user.avatar.attach(io: file, filename: default_avatar)
+end
+
+puts "Created #{user.email}"
+
+puts "Creating tracks"
 
 track_ruby1 = Track.create!(
   title: "Ruby Basics",
@@ -63,6 +75,10 @@ track_html1 = Track.create!(
   title: "HTML Basic",
   language: Language.find_by(name: "HTML")
 )
+
+puts "Created tracks"
+
+puts "Creating lessons"
 
 Lesson.create!(
   title: "Convert Minutes into Seconds",
@@ -127,6 +143,9 @@ Lesson.create!(
   difficulty: 1,
   track_id: track_js1.id
 )
+
+
+puts "Lessons created"
 
 Lesson.create!(
   title: "Find the Maximum Number",

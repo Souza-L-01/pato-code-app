@@ -1,5 +1,5 @@
 class Track < ActiveRecord::Base
-  belongs_to :language
+  belongs_to :language, dependent: :destroy
   has_many :lessons
 
   validates :title, presence: true
