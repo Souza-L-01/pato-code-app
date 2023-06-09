@@ -16,6 +16,7 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <meta charset="utf-8"/>
+    <%= favicon_link_tag 'favicon.ico' %>
   </head>
 
   <body>
@@ -23,6 +24,7 @@
     <%= render "shared/flashes" %>
     <%= render "shared/sidebar" %>
      <div class=<%= "container" unless current_page?(root_path) %> >
+     <div id="background"></div>
       <%= yield %>
     </div>
 

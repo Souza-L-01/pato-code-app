@@ -8,7 +8,7 @@
 <div class="d-flex flex-wrap justify-content-center">
   <% @tracks.each do |track| %>
     <div class="col-3 mb-4">
-      <%= link_to language_track_path(track), class: 'link-dark' do %>
+      <%= link_to language_track_path(@language, track), class: 'link-dark' do %>
         <div class="d-flex flex-column align-items-center">
           <div>
             <%= image_tag 'folder.svg' %>

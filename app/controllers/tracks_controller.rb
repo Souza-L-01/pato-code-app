@@ -2,11 +2,10 @@ class TracksController < ApplicationController
   #TODO: remove when login is working
   skip_before_action :authenticate_user!, only: [:show]
 
-  before_action :set_language, only: [:show]
+  before_action :set_language, :set_track, only: [:show]
 
   def show
-     @track = Track.find(params[:language_id])
-    @lessons = @track.lessons
+     @lessons = @track.lessons
   end
 
   private

@@ -10,14 +10,13 @@ Rails.application.routes.draw do
       get 'search'
     end  
     resources :posts, only: %i[index show create]
+    end
   end
   resources :posts, only: %i[destroy] do
     resources :comments, only: %i[create]
   end
 
   resources :comments, only: %i[destroy]
-
-  # resources :prompts, only: [ :generate_text ]
 
   resources :prompts, only: %i[new create show] do
     collection do 
