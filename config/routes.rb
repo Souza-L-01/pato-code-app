@@ -8,10 +8,10 @@ Rails.application.routes.draw do
   resources :lessons, only: %i[index show create] do
     collection do
       get 'search'
-    end  
-    resources :posts, only: %i[index show create]
     end
+    resources :posts, only: %i[index show create]
   end
+
   resources :posts, only: %i[destroy] do
     resources :comments, only: %i[create]
   end
@@ -19,9 +19,8 @@ Rails.application.routes.draw do
   resources :comments, only: %i[destroy]
 
   resources :prompts, only: %i[new create show] do
-    collection do 
+    collection do
       post :generate_text
     end
   end
-
 end
