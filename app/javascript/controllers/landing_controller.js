@@ -17,12 +17,12 @@ let iconAreaBounds, mouseDown, movingElement, iconOffsetX, iconOffsetY;
 
 iconAreaEl.addEventListener('mouseup', evt => {
   movingElement = null;
-  window.location.href = "lessons_path"
+  window.location.href = "https://www.patofix.nl/languages"
 });
 
 iconAreaEl.addEventListener('mouseleave', evt => {
   movingElement = null;
-  window.location.href = "lessons_path"
+  window.location.href = "https://www.patofix.nl/languages"
 });
 
 iconAreaEl.addEventListener('mousemove', evt => {
