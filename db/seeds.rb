@@ -9,7 +9,7 @@ User.destroy_all
 puts "Creating languages..."
 javascript = { name: "JavaScript", filepath: File.join(__dir__, "icons/js-folder.svg") }
 ruby =  { name: "Ruby", filepath: File.join(__dir__, "icons/ruby-folder.svg") }
-css = { name: "CSS", filepath: File.join(__dir__, "icons/css-folder.svg") }
+css = { name: "CSS", filepath: File.join(__dir__, "icons/CSS-folder.svg") }
 html = { name: "HTML", filepath: File.join(__dir__, "icons/html-folder.svg") }
 
 languages = [javascript, ruby, css, html]
