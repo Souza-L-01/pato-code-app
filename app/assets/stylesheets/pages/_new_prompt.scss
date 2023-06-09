@@ -10,8 +10,6 @@
   height: 289em;
   background-position: 0 0, 1em 0, 1em -1em, 0em 1em;
   font-family: Macintosh;
-  // letter-spacing: -2px;
-  font-smoothing: none;
 }
 
 .window {
@@ -73,5 +71,5 @@
 .explanation-textarea, .bug-textarea {
     width: 100%;
     height: 245px;
-    resize: vertical; 
+    resize: vertical;
 }

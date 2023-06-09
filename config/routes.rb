@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: "pages#landing"
-    get '/home', to: 'pages#home'
-    devise_for :users
-    resources :tracks, only: [:index, :show]
 
+  resources :languages, only: %i[index show] do
+    resources :tracks, only: %i[show]
+  end
   resources :lessons, only: [:show] do
     resources :posts, only: [:index, :show, :create]
   end

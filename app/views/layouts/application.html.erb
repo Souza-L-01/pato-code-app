@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b5d54b73c2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
@@ -24,7 +25,7 @@
      <div class=<%= "container" unless current_page?(root_path) %> >
       <%= yield %>
     </div>
-   
+
     <%# make a <footer></footer> %>
   </body>
 </html>

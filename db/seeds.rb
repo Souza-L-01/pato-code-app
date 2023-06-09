@@ -1,3 +1,4 @@
+
 Prompt.destroy_all
 User.destroy_all
 
@@ -8,46 +9,69 @@ prompt = user.prompts.create!(
   answer: "A class is a blueprint for an object. An object is an instance of a class. A class is a definition, an object is an instance. A class creates a new type where objects are instances of the class."
 )
 
+puts "Cleaning database..."
+
+Lesson.destroy_all
+Track.destroy_all
+Language.destroy_all
+User.destroy_all
+
+puts "Creating languages..."
+javascript = { name: "JavaScript", filepath: File.join(__dir__, "icons/js-folder.svg") }
+ruby =  { name: "Ruby", filepath: File.join(__dir__, "icons/ruby-folder.svg") }
+css = { name: "CSS", filepath: File.join(__dir__, "icons/css-folder.svg") }
+html = { name: "HTML", filepath: File.join(__dir__, "icons/html-folder.svg") }
+
 puts 'Seeding completed successfully'
 
 # puts "Cleaning database..."
 # Language.destroy_all
 
-# puts "Creating languages..."
-# javascript = { name: "JavaScript", filepath: File.join(__dir__, "icons/js-folder.svg") }
-# ruby =  { name: "Ruby", filepath: File.join(__dir__, "icons/ruby-folder.svg") }
-# css = { name: "CSS", filepath: File.join(__dir__, "icons/css-folder.svg") }
-# html = { name: "HTML", filepath: File.join(__dir__, "icons/css-folder.svg") }
+User.create!(email: "lunna@hotmail.com", password: "123456")
 
-# languages = [javascript, ruby, css, html]
+track_ruby1 = Track.create!(
+  title: "Ruby Basics",
+  language: Language.find_by(name: "Ruby")
+)
 
-# languages.each do |attributes|
-#   language = Language.create!(name: attributes[:name])
-#   file = File.open(attributes[:filepath])
-#   language.image.attach(io: file, filename: "#{attributes[:name]}.svg", content_type: "image/svg+xml")
-#   puts "Created #{language.name}"
-# end
-# puts "Finished!"
+track_ruby2 = Track.create!(
+  title: "Ruby Methods",
+  language: Language.find_by(name: "Ruby")
+)
 
-# User.destroy_all
-# Lesson.destroy_all
+track_ruby3 = Track.create!(
+  title: "Ruby Functions",
+  language: Language.find_by(name: "Ruby")
+)
 
-# User.create!(email: "lunna@hotmail.com", password: "123456")
+track_ruby4 = Track.create!(
+  title: "Ruby Advanced",
+  language: Language.find_by(name: "Ruby")
+)
 
-# track_ruby1 = Track.create!(
-#   title: "Ruby Basic",
-#   language: Language.find_by(name: "Ruby")
-# )
+track_js1 = Track.create!(
+  title: "JavaScript Basics",
+  language: Language.find_by(name: "JavaScript")
+)
 
-# Track.create!(
-#   title: "JavaScript Basic",
-#   language: Language.find_by(name: "JavaScript")
-# )
+Track.create!(
+  title: "CSS Basics",
+  language: Language.find_by(name: "CSS")
+)
 
-# Track.create!(
-#   title: "CSS Basic",
-#   language: Language.find_by(name: "CSS")
-# )
+Track.create!(
+  title: "HTML Basics",
+  language: Language.find_by(name: "HTML")
+)
+
+Lesson.create!(
+  title: "Convert Minutes into Seconds",
+  content: "def convert(minutes) return minutes * 60; end",
+  columns_explanation: "Here we are defining a method to convert minutes into seconds. To do that we need to multiply the minutes into seconds. This method can be applied to any number of minutes.",
+  difficulty: 1,
+  track_id: track_ruby1.id
+)
+
 
 # Track.create!(
 #   title: "HTML Basic",
