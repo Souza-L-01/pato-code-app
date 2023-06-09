@@ -1,4 +1,4 @@
-class ChatGPTService
+class ChatGptService
   include HTTParty
   base_uri 'https://api.openai.com/v1'
   headers 'Content-Type' => 'application/json'

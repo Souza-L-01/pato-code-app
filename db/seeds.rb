@@ -214,7 +214,7 @@ Lesson.create!(
 Lesson.create!(
   title: "Creating a Responsive Navigation Bar",
   content: ".navbar {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  background-color: #f8f8f8;\n  padding: 10px;\n}\n\n.navbar ul {\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n  display: flex;\n}\n\n.navbar li {\n  margin-right: 10px;\n}\n\n.navbar a {\n  text-decoration: none;\n  color: #333;\n}",
-  columns_explanation: "In this lesson, we define CSS styles for creating a responsive navigation bar. The 'navbar' class sets the container to a flex layout, with 'justify-content: space-between' and 'align-items: center' to distribute the content evenly and center it vertically. The 'background-color', 'padding', and other properties can be adjusted to fit the desired design. The 'navbar ul', 'navbar li', and 'navbar a' styles define the appearance of the navigation links and their list. This technique can be used to create a responsive and visually"
+  columns_explanation: "In this lesson, we define CSS styles for creating a responsive navigation bar. The 'navbar' class sets the container to a flex layout, with 'justify-content: space-between' and 'align-items: center' to distribute the content evenly and center it vertically. The 'background-color', 'padding', and other properties can be adjusted to fit the desired design. The 'navbar ul', 'navbar li', and 'navbar a' styles define the appearance of the navigation links and their list. This technique can be used to create a responsive and visually",
   difficulty: 1,
   track_id: track_css1.id
 )

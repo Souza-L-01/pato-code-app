@@ -2,22 +2,20 @@ import { Controller } from 'stimulus';
 
 export default class extends Controller {
   static targets = ['bugDescription', 'submitButton', 'saveButton'];
-
   connect() {
-    this.submitButtonTarget.addEventListener('click', this.generateText.bind(this));
-    this.saveButtonTarget.addEventListener('click', this.handleSave.bind(this));
+    console.log('Hello, Stimulus!', this.element);
   }
-
   generateText(event) {
     event.preventDefault();
 
     const prompt = this.bugDescriptionTarget.value;
     const length = 100; // Specify the desired length of the generated text
 
-    fetch(`/api/prompts/generate_text?prompt=${prompt}&length=${length}`)
+    fetch(`/prompts/generate_text?prompt=${prompt}&length=${length}`, {method: 'POST'})
         .then(response => response.json())
         .then(data => {
             const generatedText = data.text;
+            console.log(generatedText);
 
             // Update the UI with the generated text
             // ...
