@@ -5,8 +5,8 @@
       <div><p>Tell me your bug</p></div>
     </div>
     <div class="content">
-      <textarea id="bug-description" class="bug-textarea" placeholder="Enter your bug description"></textarea>
-      <button class="submit-button" >Submit</button>
+      <textarea id="bug-description" class="bug-textarea" placeholder="Enter your bug description" data-controller="prompts" data-target="prompts.bugDescription"></textarea>
+      <button class="submit-button" data-action="click->prompts#generateText">Submit</button>
     </div>
   </div>
 
@@ -16,9 +16,8 @@
       <div><p>Explanation</p></div>
     </div>
     <div class="content">
-      <textarea id="explanation" class="explanation-textarea" placeholder="Enter your explanation"></textarea>
-      <button class="save-button" >Save</button>
+      <textarea id="explanation" class="explanation-textarea" placeholder="Enter your explanation" data-controller="prompts" data-target="prompts.explanation"></textarea>
+      <button class="save-button" data-action="click->prompts#handleSave">Save</button>
     </div>
   </div>
 </div>
-

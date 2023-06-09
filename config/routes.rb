@@ -5,18 +5,25 @@ Rails.application.routes.draw do
   resources :languages, only: %i[index show] do
     resources :tracks, only: %i[show]
   end
-  resources :lessons, only: [:show] do
+  resources :lessons, only: [:index, :show, :create] do
+    collection do
+      get 'search'
+    end  
     resources :posts, only: [:index, :show, :create]
   end
-  resources :posts, only: [:delete] do
+  resources :posts, only: [:destroy] do
     resources :comments, only: [:create]
   end
 
-  resources :comments, only: [:delete]
+  resources :comments, only: [:destroy]
 
-  resources :prompts, only: [:new, :create]
+  # resources :prompts, only: [ :generate_text ]
 
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :prompts, only: [:new, :create] do
+    collection do 
+      get :generate_text
+      post :generate_text
+    end
+  end
+
 end
