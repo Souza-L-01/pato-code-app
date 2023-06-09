@@ -28,7 +28,7 @@
 
   ul.icons {
     list-style-type: none;
-    position: center;
+    // position: center;
       --square-size: 3px;
     --square-color1: black;
     --square-color2: white;
@@ -42,26 +42,26 @@
     display: grid;
     width: 5rem;
     grid-template-rows: repeat(2, min-content);
-    place-items: center;
+    // place-items: center;
   }
 
   .icons li {
     display: inline-block;
     position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 1.9em;
+    right: 30rem;
     opacity: 0;
     animation: 1s launch-icons 1s linear forwards;
   }
   ul.icons li:nth-of-type(2) {
-    right: 6rem;
+    right: 37rem;
   }
   ul.icons li:nth-of-type(3) {
-    right: 11rem;
+    right: 45rem;
   }
-  .icons li:active {
-    filter: invert(1);
-  }
+  // .icons li:active {
+  //   filter: invert(1);
+  // }
 
   .icons figure figcaption {
     background-color: white;

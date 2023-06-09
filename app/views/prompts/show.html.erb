@@ -1,2 +1,26 @@
-<h1>Prompts#create</h1>
-<p>Find me in app/views/prompts/create.html.erb</p>
+<div class="d-flex justify-content-evenly" id="background-prompt">
+  <div class="window">
+    <div class="bar">
+      <i></i>
+      <div><p data-controller="hello" >Tell me your bug</p></div>
+    </div>
+    <div class="content" data-controller="prompts">
+      <%= form_with(model: @prompt, url: generate_text_prompts_path, data: { target: "prompts.bugDescription" }) do |form| %>
+        <%= form.text_area :question, id: "bug-description", class: "bug-textarea", placeholder: "Enter your bug description" %>
+        <%= form.button :submit, class: "submit-button", "data-action": "click->prompts#generateText" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="window">
+    <div class="bar">
+      <i></i>
+      <div><p>Explanation</p></div>
+    </div>
+    <div class="content" data-controller="prompts">
+      <%= simple_form_for @prompt, url: generate_text_prompts_path, html: { data: { target: 'prompts.bugDescription' } } do |form| %>
+        <%= form.text_area :answer, id: 'bug-description', class: 'bug-textarea', placeholder: 'Wait for your explanation' %>
+        <%# <%= form.button :submit, class: 'submit-button', 'data-action': 'click->prompts#generateText'  %>
+      <% end %>
+    </div>
+  </div>
+</div>
