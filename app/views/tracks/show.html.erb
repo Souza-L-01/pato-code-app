@@ -1,2 +1,22 @@
-<h1>Tracks#show</h1>
-<p>Find me in app/views/tracks/show.html.erb</p>
+<div class="d-flex justify-content-center align-items-center">
+  <div class="lines"></div>
+  <div class="title-wrapper px-4">
+    <h1 class="text-dark text-decoration-none"><%= @track.title %></h1>
+  </div>
+  <div class="lines"></div>
+</div>
+
+<div class="row justify-content-center">
+  <% @lessons.each do |lesson| %>
+    <div class="col-6 col-md-2 mt-2">
+      <%= link_to lesson_path(lesson), class: 'text-decoration-none' do %>
+        <div class="square-card">
+          <div class="square-card-content">
+            <h5 class="text-dark text-decoration-none square-card-content"><%= lesson.title %></h5>
+            <p class="text-dark text-decoration-none square-card-content">Difficulty: <%= lesson.difficulty %>/5</p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

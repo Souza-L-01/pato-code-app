@@ -1,20 +1,12 @@
 class TracksController < ApplicationController
   #TODO: remove when login is working
-  skip_before_action :authenticate_user!, only: [:index, :show, :search]
+  skip_before_action :authenticate_user!, only: [:show]
 
-  before_action :set_language, only: [:index, :show]
+  before_action :set_language, only: [:show]
 
-
-
-  # GET /languages/:language_id/tracks
-  def index
-    @tracks = @language.tracks
-    render json: @tracks
-  end
-
-  # GET /languages/:language_id/tracks/:id
   def show
-    render json: @track
+     @track = Track.find(params[:language_id])
+    @lessons = @track.lessons
   end
 
   private
