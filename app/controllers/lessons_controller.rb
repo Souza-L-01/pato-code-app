@@ -1,7 +1,4 @@
 class LessonsController < ApplicationController
-  #TODO: remove when login is working
-  skip_before_action :authenticate_user!, only: [:show, :search]
-
   before_action :set_lesson, only: [:show]
 
   def show
