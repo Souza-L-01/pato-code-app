@@ -1,5 +1,7 @@
 class LessonsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  #TODO: remove when login is working
+  skip_before_action :authenticate_user!, only: [:index, :show, :search]
+
   before_action :set_lesson, only: [:show]
 
   # GET /lessons
@@ -13,6 +15,12 @@ class LessonsController < ApplicationController
     render json: @lesson
   end
 
+  def search
+    query = params[:query]
+    @lessons = Lesson.where("title LIKE ? OR content LIKE ?", "%#{query}%", "%#{query}%")
+    render json: @lessons
+  end
+  
   # POST /lessons
   def create
     @lesson = Lesson.new(lesson_params)
