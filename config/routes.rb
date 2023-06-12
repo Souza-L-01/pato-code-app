@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#landing"
+  get "/dashboard", to: "pages#dashboard", as: "dashboard"
 
   resources :languages, only: %i[index show] do
     resources :tracks, only: %i[show]
