@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
+
   root to: "pages#landing"
 
   resources :languages, only: %i[index show] do
@@ -9,7 +10,7 @@ Rails.application.routes.draw do
   resources :lessons, only: %i[index show create] do
     # collection do
     #   get 'search'
-    # end 
+    # end
     resources :posts, only: %i[index show create]
   end
 

@@ -1,5 +1,5 @@
 class TracksController < ApplicationController
-  #TODO: remove when login is working
+  # Do we want this still?
   skip_before_action :authenticate_user!, only: [:show]
 
   before_action :set_language, :set_track, only: [:show]
