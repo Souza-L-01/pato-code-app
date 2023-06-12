@@ -25,14 +25,18 @@ puts "Created languages"
 
 puts "Creating users"
 
-user1 = User.create!(email: "lunna@hotmail.com", password: "123456")
-user2 = User.create!(email: "someone@hotmail.com", password: "123456")
-user3 = User.create!(email: "joop@hotmail.com", password: "123456")
+user1 = User.create!(email: "lunna@hotmail.com", username: "Lunna", password: "123456")
+user2 = User.create!(email: "someone@hotmail.com", username: "Sjors", password: "123456")
+user3 = User.create!(email: "joop@hotmail.com", username: "Joop", password: "123456")
 
-unless user1.avatar.attached?
+users = [user1, user2, user3]
+
+users.each do |user|
+  unless user.avatar.attached?
   default_avatar = "duck1ava.png"
   file = File.open(File.join(__dir__, "icons/", default_avatar))
   user1.avatar.attach(io: file, filename: default_avatar)
+  end
 end
 
 puts "Created #{user1.email}"

@@ -6,7 +6,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :email, :username, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true
+  validates :username, presence: true, uniqueness: { message: 'This username is already in use' }
   validates :password, presence: true
 
   has_many :started_lessons, dependent: :destroy
