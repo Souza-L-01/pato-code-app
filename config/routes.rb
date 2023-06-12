@@ -6,9 +6,9 @@ Rails.application.routes.draw do
     resources :tracks, only: %i[show]
   end
   resources :lessons, only: %i[index show create] do
-    collection do
-      get 'search'
-    end
+    # collection do
+    #   get 'search'
+    # end
     resources :posts, only: %i[index show create]
   end
 
