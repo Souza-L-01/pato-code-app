@@ -27,6 +27,7 @@ puts "Creating users"
 
 user1 = User.create!(email: "lunna@hotmail.com", password: "123456")
 user2 = User.create!(email: "someone@hotmail.com", password: "123456")
+user3 = User.create!(email: "joop@hotmail.com", password: "123456")
 
 unless user1.avatar.attached?
   default_avatar = "duck1ava.png"
@@ -37,9 +38,9 @@ end
 puts "Created #{user1.email}"
 puts "Created #{user2.email}"
 
-puts "Creating prompts"
+# puts "Creating prompts"
 
-puts "Prompts created"
+# puts "Prompts created"
 
 puts "Creating tracks"
 
@@ -80,7 +81,7 @@ track_html1 = Track.create!(
 
 puts "Created tracks"
 
-puts "Creating lessons"
+puts "\nCreating lessons"
 
 hard_lesson = Lesson.create!(
   title: "Iterators and generators",
@@ -274,11 +275,25 @@ Lesson.create!(
   track_id: track_html1.id
 )
 
-# Post.create!(
-#   title: "I am crying right now :'(",
-#   content: "I thought I was ready for this, but I'm going back to the basics",
-#   user_id: user2.id,
-#   lesson_id: hard_lesson.id
-# )
-
 puts "Lessons created"
+
+puts "\nCreating posts"
+
+Post.create!(
+  title: "I am crying right now :'(",
+  content: "I thought I was ready for this, but I'm going back to the basics",
+  user_id: user2.id,
+  lesson_id: hard_lesson.id,
+  timestamp: Time.now
+)
+
+Post.create!(
+  title: "This was easy!",
+  content: "If you need any help, let me know!",
+  user_id: user3.id,
+  lesson_id: hard_lesson.id,
+  timestamp: Time.now
+)
+
+puts "Posts created"
+puts "\nFinished"
