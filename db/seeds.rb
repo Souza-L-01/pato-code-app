@@ -12,7 +12,7 @@ ruby =  { name: "Ruby", filepath: File.join(__dir__, "icons/ruby-folder.svg") }
 css = { name: "CSS", filepath: File.join(__dir__, "icons/CSS-folder.svg") }
 html = { name: "HTML", filepath: File.join(__dir__, "icons/html-folder.svg") }
 
-languages = [javascript, ruby, css, html]
+languages = [ruby, javascript, html, css]
 
 languages.each do |attributes|
   language = Language.create!(name: attributes[:name])
