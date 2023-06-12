@@ -1,8 +1,8 @@
-<div class="d-flex justify-content-evenly" id="background-prompt">
+<div class="d-flex justify-content-center" id="background-prompt">
   <div class="window">
     <div class="bar">
       <i></i>
-      <div><p data-controller="hello" >Tell me your bug</p></div>
+      <div class="bar-name"><p data-controller="hello" >Tell me your bug</p></div>
     </div>
     <div class="content" data-controller="prompts">
       <%= form_with(model: @prompt, url: generate_text_prompts_path, data: { target: "prompts.bugDescription" }) do |form| %>
@@ -14,7 +14,7 @@
   <div class="window">
     <div class="bar">
       <i></i>
-      <div><p>Explanation</p></div>
+      <div><p>Read your debbing </p></div>
     </div>
     <div class="content" data-controller="prompts">
       <%= simple_form_for @prompt, url: generate_text_prompts_path, html: { data: { target: 'prompts.bugDescription' } } do |form| %>
@@ -24,10 +24,3 @@
     </div>
   </div>
 </div>
-
-<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="wqyQoz" data-user="warborn" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-  <span>See the Pen <a href="https://codepen.io/warborn/pen/wqyQoz">
-  skills-summary-editor</a> by Iván Munguía (<a href="https://codepen.io/warborn">@warborn</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
