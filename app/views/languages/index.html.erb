@@ -3,7 +3,7 @@
     <% @languages.each do |language| %>
       <div class="col-md-6 col-lg-5 mb-4">
         <div class="d-flex flex-column align-items-center">
-          <%= link_to cl_image_tag(language.image.key, size: '250x250', crop: :fill), language_path(language) %>
+          <%# <%= link_to cl_image_tag(language.image.key, size: '250x250', crop: :fill), language_path(language) %> %>
           <div class="align-self-center mb-2">
             <h1><%= language.name %></h1>
           </div>

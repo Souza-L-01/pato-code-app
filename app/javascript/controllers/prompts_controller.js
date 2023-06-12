@@ -8,7 +8,8 @@ export default class extends Controller {
   generateText(event) {
     event.preventDefault();
 
-    const prompt = this.bugDescriptionTarget.value;
+    const prompt = this.bugDescriptionTarget.value + " " + "please don't give the answer";
+    console.log(prompt);
     const length = 100; // Specify the desired length of the generated text
 
     fetch(`/prompts/generate_text?prompt=${prompt}&length=${length}`, {method: 'POST'})
