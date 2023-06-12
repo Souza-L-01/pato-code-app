@@ -17,10 +17,12 @@ let iconAreaBounds, mouseDown, movingElement, iconOffsetX, iconOffsetY;
 
 iconAreaEl.addEventListener('mouseup', evt => {
   movingElement = null;
+  window.location.href = "https://pato-code-app.herokuapp.com/languages"
 });
 
 iconAreaEl.addEventListener('mouseleave', evt => {
   movingElement = null;
+  window.location.href = "https://pato-code-app.herokuapp.com/languages"
 });
 
 iconAreaEl.addEventListener('mousemove', evt => {
