@@ -26,7 +26,6 @@ icon.addEventListener('click', evt => {
 iconAreaEl.addEventListener('mouseup', evt => {
   console.log("hi2", evt)
   movingElement = null;
-  
 });
 
 iconAreaEl.addEventListener('mouseleave', evt => {
