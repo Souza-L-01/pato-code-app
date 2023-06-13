@@ -1,0 +1,22 @@
+<h1><%= @post.title %></h1>
+<p><%= @post.content %></p>
+
+
+<% @post.comments.each do |comment| %>
+  <div>
+    <p><%= comment.content %></p>
+    <p><strong>Posted by:</strong> <%= comment.user.email %></p>
+  </div>
+<% end %>
+
+
+<% if user_signed_in? %>
+  <div>
+    <%= simple_form_for [@post, @comment] do |form| %>
+      <%= form.input :content, as: :text, input_html: { rows: 3 }, label: false %>
+      <%= form.button :submit, class: 'btn btn-primary' %>
+    <% end %>
+  </div>
+<% else %>
+  <p>Please sign in to add a comment.</p>
+<% end %>

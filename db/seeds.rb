@@ -28,8 +28,10 @@ puts "Creating users"
 user1 = User.create!(email: "lunna@hotmail.com", username: "Lunna", password: "123456")
 user2 = User.create!(email: "someone@hotmail.com", username: "Sjors", password: "123456")
 user3 = User.create!(email: "joop@hotmail.com", username: "Joop", password: "123456")
+user4 = User.create!(email: "hans@hotmail.com", username: "Hans", password: "123456")
 
-users = [user1, user2, user3]
+
+users = [user1, user2, user3, user4]
 
 users.each do |user|
   unless user.avatar.attached?
@@ -87,10 +89,18 @@ puts "Created tracks"
 
 puts "\nCreating lessons"
 
-hard_lesson = Lesson.create!(
+hard_lesson1 = Lesson.create!(
   title: "Iterators and generators",
   content: "def convert(minutes)\n return minutes * 60;\n end",
   columns_explanation: "Here we are defining a method to convert minutes into seconds. To do that we need to multiply the minutes into seconds. This method can be applied to any number of minutes.",
+  difficulty: 4,
+  track_id: track_ruby4.id
+)
+
+hard_lesson2 = Lesson.create!(
+  title: "Enhanced Stupid Coach",
+  content: "Stupid coaching is super nice",
+  columns_explanation: "In this lesson we will go through the flow of our stupid coaching exercise",
   difficulty: 4,
   track_id: track_ruby4.id
 )
@@ -107,7 +117,7 @@ Lesson.create!(
   title: "Convert Age to Days",
   content: "def calc_age(age)\n return age * 365;\n end",
   columns_explanation: "This code defines a Ruby method called calc_age that takes a parameter called age. The purpose of this method is to calculate the approximate number of days by multiplying the given age by 365.",
-  difficulty: 1,
+  difficulty: 2,
   track_id: track_ruby1.id
 )
 
@@ -131,7 +141,7 @@ Lesson.create!(
   title: "Check if Palindrome",
   content: "def palindrome?(txt)\n  txt == txt.reverse\nend",
   columns_explanation: "In this lesson, we define a method called palindrome? that takes a string as input and checks if it is a palindrome. We compare the input string with its reversed version using the `reverse` method provided by Ruby. If the two strings are equal, it means the input string is a palindrome. This method can be used to determine if a given string reads the same forwards and backwards.",
-  difficulty: 2,
+  difficulty: 3,
   track_id: track_ruby1.id
 )
 
@@ -155,7 +165,7 @@ Lesson.create!(
   title: "Power Calculator",
   content: "function circuitPower(voltage, current) {\n return voltage * current; \n}",
   columns_explanation: "The code inside the function return voltage * current; performs the calculation. It multiplies the value of the voltage parameter by the value of the current parameter, and then returns the result. To use this function, you can call it and provide values for the voltage and current parameters. The function will return the calculated power value.",
-  difficulty: 1,
+  difficulty: 4,
   track_id: track_js1.id
 )
 
@@ -251,7 +261,7 @@ Lesson.create!(
   title: "Working with Images",
   content: "<img src=\"path/to/image.jpg\" alt=\"Description of the image\">",
   columns_explanation: "In this lesson, we learn how to insert an image into an HTML page. The `<img>` tag is used to include an image on a webpage. The `src` attribute specifies the path to the image file, and the `alt` attribute provides alternative text that is displayed if the image cannot be loaded or for accessibility purposes. Make sure to replace 'path/to/image.jpg' with the actual path to your image file, and provide a descriptive 'alt' text for accessibility purposes.",
-  difficulty: 1,
+  difficulty: 2,
   track_id: track_html1.id
 )
 
@@ -259,7 +269,7 @@ Lesson.create!(
   title: "Creating Links",
   content: "<a href=\"https://www.example.com\">Visit Example Website</a>",
   columns_explanation: "In this lesson, we learn how to create a link in HTML. The `<a>` tag is used to define a hyperlink. The `href` attribute specifies the URL that the link should navigate to. The link text is placed between the opening and closing `<a>` tags. Replace 'https://www.example.com' with the actual URL you want to link to, and provide descriptive link text that indicates the purpose of the link.",
-  difficulty: 1,
+  difficulty: 2,
   track_id: track_html1.id
 )
 
@@ -267,7 +277,7 @@ Lesson.create!(
   title: "Creating an Ordered List",
   content: "<ol>\n  <li>First item</li>\n  <li>Second item</li>\n  <li>Third item</li>\n</ol>",
   columns_explanation: "In this lesson, we learn how to create an ordered list in HTML. The `<ol>` tag is used to define an ordered list. Each list item is represented by the `<li>` tag. The list items are automatically numbered by the browser. Replace the placeholder text with your own list items to create a custom ordered list.",
-  difficulty: 1,
+  difficulty: 2,
   track_id: track_html1.id
 )
 
@@ -275,7 +285,7 @@ Lesson.create!(
   title: "Creating a Table",
   content: "<table>\n  <thead>\n    <tr>\n      <th>Header 1</th>\n      <th>Header 2</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td>Row 1, Cell 1</td>\n      <td>Row 1, Cell 2</td>\n    </tr>\n    <tr>\n      <td>Row 2, Cell 1</td>\n      <td>Row 2, Cell 2</td>\n    </tr>\n  </tbody>\n</table>",
   columns_explanation: "In this lesson, we learn how to create a table in HTML. The `<table>` tag is used to define a table. The table structure consists of `<thead>` for the table header, `<tbody>` for the table body, and `<tr>` for each table row. Within each row, the data is represented by the `<td>` tags. The table header cells are represented by `<th>` tags. Customize the table headers and data cells with your own content to create a table that suits your needs.",
-  difficulty: 2,
+  difficulty: 3,
   track_id: track_html1.id
 )
 
@@ -283,21 +293,40 @@ puts "Lessons created"
 
 puts "\nCreating posts"
 
-Post.create!(
+post1 = Post.create!(
   title: "I am crying right now :'(",
-  content: "I thought I was ready for this, but I'm going back to the basics",
+  content: "I need help! I really don't get this exercise.",
   user_id: user2.id,
-  lesson_id: hard_lesson.id,
-  timestamp: Time.now
+  lesson_id: hard_lesson1.id,
+  timestamp: Time.now.yesterday
 )
 
-Post.create!(
-  title: "This was easy!",
-  content: "If you need any help, let me know!",
+post2 = Post.create!(
+  title: "I am super stuck!",
+  content: "Can someone help me?",
   user_id: user3.id,
-  lesson_id: hard_lesson.id,
-  timestamp: Time.now
+  lesson_id: hard_lesson2.id,
+  timestamp: Time.new(2023, 5, 17, 10, 30, 0)
 )
 
 puts "Posts created"
+
+puts "Creating comments"
+
+Comment.create!(
+  content: "If you give me some context I will try to help you out, mate!",
+  user_id: user4.id,
+  post_id: post2.id,
+  timestamp: Time.now
+)
+
+Comment.create!(
+  content: "Can you explain? I want to help you out!",
+  user_id: user4.id,
+  post_id: post1.id,
+  timestamp: Time.now
+)
+
+puts "Comments created"
+
 puts "\nFinished"

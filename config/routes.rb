@@ -11,7 +11,9 @@ Rails.application.routes.draw do
     # collection do
     #   get 'search'
     # end
-    resources :posts, only: %i[index show create]
+    resources :posts, only: %i[index show create] do
+      resources :comments, only: %i[create]
+    end
   end
 
   resources :posts, only: %i[destroy] do
