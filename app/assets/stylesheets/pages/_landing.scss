@@ -4,8 +4,21 @@
     --color-back: white;
   }
 
+  #landing-img {
+    // position: relative; 
+    // object-fit: contain;
+    // object-position: 10px 20%;
+    margin-top: 18%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    border-radius: 1rem;
+  }
+
   ul, li, figure, menu {
-    margin: 0;
+    margin-bottom: 10px;
     padding: 0;
   }
 
@@ -14,7 +27,6 @@
     padding-top: 100px;
     // border-bottom: 2px solid black;
     background-color: transparent;
-    // background-image: url("/images/patofix.png")
   }
 
   .menu li {
@@ -41,8 +53,14 @@
   .icons figure {
     display: grid;
     width: 5rem;
+    height: 3em;
     grid-template-rows: repeat(2, min-content);
     // place-items: center;
+    // margin-top: 18%;
+    max-width: 100%;
+    // height: auto;
+    object-position: center;
+    z-index: -1;
   }
 
   .icons li {

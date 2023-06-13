@@ -1,1 +1,48 @@
+.root {
+  --color-fore: black;
+  --color-back: white;
+}
 
+// .menu2 {
+//   margin: 0;
+//   padding: 0;
+// }
+
+// .menu2 {
+//   margin-top: 200px;
+//   padding-top: 100px;
+//   background-color: transparent;
+// }
+
+// .menu2 {
+//   display: inline;
+//   padding-left: 0.5rem;
+// }
+
+ul.icons2 {
+    list-style-type: none;
+    // position: center;
+      --square-size: 3px;
+    --square-color1: black;
+    --square-color2: white;
+    background: repeating-conic-gradient(transparent 0% 25%, var(--square-color1) 0% 50%) 50% / calc(var(--square-size) * 2) calc(var(--square-size) * 2);
+    background-color: var(--square-color2);
+    margin-left: 0% ;
+    // border-radius: 2%;
+  }
+
+div.screen2 {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh; /* Use viewport height to fill the screen */
+  margin-left: auto;
+//   border-radius: 1rem;
+  overflow: auto;
+  animation: 1s launch-height 0s linear forwards;
+}
+
+div.screen2 > * {
+  mix-blend-mode: screen;
+}

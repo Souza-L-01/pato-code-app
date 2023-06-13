@@ -5,96 +5,102 @@
   <div>
     <%= link_to("#", class: "logo") do %>
       <div class="settings"></div>
-      <div class="scrollbar" id="style-1">
+       <div class="scrollbar" id="style-1">
         <ul>
-          <li>
-            <%= link_to("#") do %>
-              <i class="fa fa-user fa-lg"></i>
+          <li class="darkerli">
+            <%= link_to("#", class: "nav-link") do %>
+              <%= image_tag("dashboard.png", alt: "dashboard", class: "dashboard-img") %>
               <span class="nav-text">Dashboard</span>
             <% end %>
           </li>
-          <li>
-            <%= link_to("#") do %>
-              <i class="fa fa-envelope-o fa-lg"></i>
-              <span class="nav-text">Contact</span>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to("#") do %>
-              <i class="fa fa-heart-o fa-lg"></i>
-              <span class="share">
-                <div class="addthis_default_style addthis_32x32_style">
-                  <div style="position:absolute; margin-left: 56px; top:3px; text-decoration: none">
-                    <%= link_to("https://www.facebook.com/sharer/sharer.php?u=", target: "_blank", class: "share-popup", style: "text-decoration: none" ) do %>
-                      <%= image_tag("https://icons.iconarchive.com/icons/pictogrammers/material/256/facebook-icon.png", width: "20px", height: "20px") %>
-                    <% end %>
-                    <%= link_to("https://twitter.com/share", target: "_blank", class: "share-popup", style: "text-decoration: none") do %>
-                      <%= image_tag("https://icons.iconarchive.com/icons/custom-icon-design/mono-general-3/256/twitter-icon.png", width: "20px", height: "20px") %>
-                    <% end %>
-                    <%= link_to("https://plusone.google.com/_/+1/confirm?hl=en&url=_URL_&title=_TITLE_", target: "_blank", class: "share-popup", style: "text-decoration: none") do %>
-                      <%= image_tag("https://icons.iconarchive.com/icons/simpleicons-team/simple/256/github-icon.png", width: "20px", height: "20px") %>
-                    <% end %>
-                  </div>
-                  <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-                  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ff17589278d8b3a"></script>
-                </div>
-              </span>
-              <span class="twitter"></span>
-              <span class="google"></span>
-              <span class="fb-like">
-                <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fstartific&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;" allowTransparency="true"></iframe>
-              </span>
-              <span class="nav-text"></span>
-            <% end %>
-          </li>
-          <li class="darkerlishadow">
-            <%= link_to("#") do %>
-              <i class="fa fa-clock-o fa-lg"></i>
-              <span class="nav-text">News</span>
-            <% end %>
-          </li>
           <li class="darkerli">
             <%= link_to("#") do %>
-              <i class="fa fa-desktop fa-lg"></i>
-              <span class="nav-text">Technology</span>
-            <% end %>
-          </li>
-          <li class="darkerli">
-            <%= link_to("#") do %>
-              <i class="fa fa-flask fa-lg"></i>
+              <%= image_tag("folder_img.png", alt: "lesson", class: "folder-img") %>
               <span class="nav-text">Lessons</span>
             <% end %>
           </li>
+
           <li class="darkerli">
             <%= link_to("#") do %>
-              <i class="fa fa-gamepad fa-lg"></i>
-              <span class="nav-text">Games</span>
+              <%= image_tag("ruby_img.png", alt: "ruby", class: "ruby-img") %>
+              <span class="nav-text">Ruby</span>
             <% end %>
           </li>
-          <li class="darkerlishadowdown">
+
+          <li class="darkerli">
+            <%= link_to("#") do %>
+              <%= image_tag("js_img.png", alt: "java-script", class: "js-img") %>
+              <span class="nav-text">JavaScript</span>
+            <% end %>
+          </li>
+
+          <li class="darkerli">
+            <%= link_to("#") do %>
+              <%= image_tag("html_img.png", alt: "html", class: "html-img") %>
+              <span class="nav-text">HTML</span>
+            <% end %>
+          </li>
+
+          <li class="darkerli">
+            <%= link_to("#") do %>
+              <%= image_tag("css_img.png", alt: "css", class: "css-img") %>
+              <span class="nav-text">CSS</span>
+            <% end %>
+          </li>
+
+          <li class="darkerli">
             <%= link_to new_prompt_path do %>
-              <i class="fa fa-rocket fa-lg"></i>
-              <span class="nav-text">Debbug</span>
+              <%= image_tag("duck_icon.png", alt: "debug", class: "duck-sidebar") %>
+              <span class="nav-text">Debug</span>
             <% end %>
           </li>
+
+          <li class="darkerli">
+            <%= link_to("#") do %>
+              <i class="fa fa-comments-o fa-xl"></i>
+              <span class="nav-text">Community</span>
+            <% end %>
+          </li>
+
           <li>
             <%= link_to("#") do %>
-              <i class="fa fa-question-circle fa-lg"></i>
-              <span class="nav-text">Help</span>
+              <i class="fa fa-envelope-o fa-xl"></i>
+              <span class="nav-text">Contact</span>
             <% end %>
           </li>
-          <ul class="logout">
-            <li>
-              <%= link_to("#") do %>
-                <i class="fa fa-lightbulb-o fa-lg"></i>
-                <span class="nav-text">
-                  BLOG 
-                </span>
-              <% end %>
-            </li>
-          </ul>
+
+          <li>
+            <%= link_to("#") do %>
+              <i class="fa fa-heart-o fa-xl"></i>
+              <span class="nav-text">
+                <%# <div class="addthis_default_style addthis_32x32_style"> %>
+                  <%# <div style="position:absolute; margin-left: 56px; top:3px; text-decoration: none"> %>
+                    <%# <%= link_to(("#"), target: "_blank", class: "share-popup", style: "text-decoration: none") do %>
+                      <%= image_tag("https://icons.iconarchive.com/icons/colebemis/feather/72/github-icon.png", width: "20px", height: "20px") %>
+                    <%# <% end %>
+                    <%# <%= link_to(("#"), target: "_blank", class: "share-popup", style: "text-decoration: none" ) do %>
+                      <%= image_tag("https://icons.iconarchive.com/icons/iconsmind/outline/72/Facebook-2-icon.png", width: "20px", height: "20px") %>
+                    <%# <% end %>
+                    <%# <%= link_to(("#"), target: "_blank", class: "share-popup", style: "text-decoration: none") do %>
+                      <%= image_tag("https://icons.iconarchive.com/icons/custom-icon-design/mono-general-3/256/twitter-icon.png", width: "20px", height: "20px") %>
+                      <%# <% end %>
+                  <%# </div> %>
+                  <%# <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+                  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ff17589278d8b3a"></script> %>
+                <%# </div> %>
+              </span>
+
+              <%#= link_to ("#") do %>
+              <%# <span class="twitter"></span>
+              <span class="github"></span>
+              <span class="fb-like"></span> %>
+                <%# <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fstartific&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;" allowTransparency="true"></iframe>%>
+            <% end %>
+          </li>
+
         </ul>
       </div>
     <% end %>
   </div>
 </nav>
+
