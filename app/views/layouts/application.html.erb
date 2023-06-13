@@ -22,12 +22,13 @@
   <body>
    <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
-    <%= render "shared/sidebar" %>
-     <div class=<%= "container" unless current_page?(root_path) %> >
-     <div id="background"></div>
-      <%= yield %>
+    <div class="screen2">
+      <%# <div class="menu2" > %>
+        <ul class="icons2">
+       <%= yield %>
+        </ul>
+      </div>
     </div>
-
-    <%# make a <footer></footer> %>
+     <%= render "shared/sidebar" %>
   </body>
 </html>

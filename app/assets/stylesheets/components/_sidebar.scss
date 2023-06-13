@@ -75,6 +75,10 @@
 
 /* Scrollbar End */
 
+.fa-lg {
+  font-size: 1em;
+}
+
 .fa {
   position: relative;
   display: table-cell;
@@ -95,7 +99,6 @@ nav.main-menu.expanded {
 .main-menu {
   float:left;
   background: #eae9e9;
-  // position: absolute;
   top: 98px;
   bottom: 0;
   height: 87%;
@@ -238,6 +241,11 @@ nav li {
 .darkerlishadow {
   background-color: #bfbdbd;
   text-transform: capitalize;
+}
+
+.darkerlishadow {
+  background-color: #2c2a2a;
+  text-transform: capitalize;
   -webkit-box-shadow: inset 0px 5px 5px -4px rgba(50, 50, 50, 0.55);
   -moz-box-shadow: inset 0px 5px 5px -4px rgba(50, 50, 50, 0.55);
   box-shadow: inset 0px 5px 5px -4px rgba(50, 50, 50, 0.55);
@@ -272,4 +280,11 @@ nav.main-menu li.active>a,
   background: #e2e2e2;
   width: 100%;
   height: 100%;
+}
+
+@font-face {
+  font-family: 'Titillium Web';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
 }
