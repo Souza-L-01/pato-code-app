@@ -1,8 +1,10 @@
-<div class="d-flex justify-content-center" id="background-prompt">
-  <div class="window">
+<div class="d-flex justify-content-center">
+  <div class="window" id="background-prompt">
     <div class="bar">
       <i></i>
-      <div class="bar-name"><p data-controller="hello" >Tell me your bug</p></div>
+      <div class="bar-name">
+        <p data-controller="hello" >Tell me your bug</p>
+      </div>
     </div>
     <div class="content" data-controller="prompts">
       <%= form_with(model: @prompt, url: generate_text_prompts_path, data: { target: "prompts.bugDescription" }) do |form| %>
@@ -11,10 +13,12 @@
       <% end %>
     </div>
   </div>
-  <div class="window">
+  <div class="window" id="background-prompt">
     <div class="bar">
       <i></i>
-      <div><p>Here's your debbing </p></div>
+      <div>
+        <p>Here's your debbing </p>
+      </div>
     </div>
     <div class="content" data-controller="prompts">
       <%= simple_form_for @prompt, url: generate_text_prompts_path, html: { data: { target: 'prompts.bugDescription' } } do |form| %>

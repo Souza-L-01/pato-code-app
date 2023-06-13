@@ -1,3 +1,14 @@
-.btn-primary {
-  
+.btn-tertiary {
+  background: none;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-tertiary:hover {
+  text-decoration: underline;
+}
+
+.btn-ter-danger {
+  color: $red;
 }
