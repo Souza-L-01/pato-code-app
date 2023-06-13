@@ -12,16 +12,16 @@ function setTime() {
 }
 
 const iconAreaEl = document.querySelector('.icons');
-const icon = document.querySelector('.icon');
+// const icon = document.querySelector('.icon');
 
 let iconAreaBounds, mouseDown, movingElement, iconOffsetX, iconOffsetY;
 
-icon.addEventListener('click', evt => {
+// icon.addEventListener('click', evt => {
 
-  console.log("hi", evt)
-  // movingElement = null;
-  window.location.href = "https://www.google.com"
-});
+//   console.log("hi", evt)
+//   // movingElement = null;
+//   window.location.href = "https://www.google.com"
+// });
 
 iconAreaEl.addEventListener('mouseup', evt => {
   console.log("hi2", evt)
