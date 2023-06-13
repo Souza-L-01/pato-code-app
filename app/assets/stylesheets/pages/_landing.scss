@@ -8,7 +8,7 @@
     // position: relative; 
     // object-fit: contain;
     // object-position: 10px 20%;
-    margin-top: 20%;
+    margin-top: 18%;
     max-width: 100%;
     height: auto;
     object-fit: cover;
@@ -18,7 +18,7 @@
   }
 
   ul, li, figure, menu {
-    margin: 0;
+    margin-bottom: 10px;
     padding: 0;
   }
 
@@ -53,8 +53,14 @@
   .icons figure {
     display: grid;
     width: 5rem;
+    height: 3em;
     grid-template-rows: repeat(2, min-content);
-    place-items: center;
+    // place-items: center;
+    // margin-top: 18%;
+    max-width: 100%;
+    // height: auto;
+    object-position: center;
+    z-index: -1;
   }
 
   .icons li {
