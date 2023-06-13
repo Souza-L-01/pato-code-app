@@ -15,13 +15,13 @@
     <link href="//db.onlinewebfonts.com/c/1a243397695904f6f56e490ffd77a9cb?family=ChicagoFLF" rel="stylesheet" type="text/css"/>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-    <meta charset="utf-8"/>
     <%= favicon_link_tag 'favicon.ico' %>
   </head>
 
   <body>
    <%= render "shared/navbar" %>
     <%= render "shared/flashes" %>
+    <%= render "shared/sidebar" %>
     <div class="screen2">
       <%# <div class="menu2" > %>
         <ul class="icons2">
@@ -29,6 +29,5 @@
         </ul>
       </div>
     </div>
-     <%= render "shared/sidebar" %>
   </body>
 </html>
