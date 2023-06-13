@@ -97,7 +97,7 @@ nav.main-menu.expanded {
 }
 
 .main-menu {
-  float:left;
+  float: left;
   background: #eae9e9;
   top: 98px;
   bottom: 0;
@@ -120,7 +120,7 @@ nav.main-menu.expanded {
   list-style: none;
   padding: 0;
   justify-content: flex-start;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 .main-menu li {
@@ -233,7 +233,8 @@ nav li {
 .darkerli {
   background-color: #e8e6e6;
   text-transform: capitalize;
-  img{
+
+  img {
     padding-left: 10px;
   }
 }
@@ -271,7 +272,7 @@ nav.main-menu li.active>a,
 .no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
 .dashboard-page nav.dashboard-menu ul li.active a {
   color: #fff;
-  background-color:rgb(190, 190, 190);
+  background-color: rgb(190, 190, 190);
   text-shadow: 0px 0px 0px;
 }
 
