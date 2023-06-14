@@ -1,0 +1,60 @@
+<h1>New Recording</h1>
+<button id="record-button">Record</button>
+
+<% @recordings.each do |recording| %>
+    <p>
+    <strong>Audio:</strong>
+    <audio controls>
+        <source src="<%= url_for(recording.audio) %>" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    </p>
+<% end %>
+
+<script>
+  const recordButton = document.getElementById('record-button');
+  const csrfToken = document.querySelector('meta[name="csrf-token"]').content;
+
+  // Access the user's microphone
+  navigator.mediaDevices.getUserMedia({ audio: true })
+    .then(function(stream) {
+      const mediaRecorder = new MediaRecorder(stream);
+      let chunks = [];
+
+      // Start & Stop recording logic
+      recordButton.addEventListener('click', function() {
+        if (mediaRecorder.state === 'inactive') {
+          mediaRecorder.start();
+          recordButton.textContent = 'Stop Recording';
+        } else {
+          mediaRecorder.stop();
+          recordButton.textContent = 'Record';
+        }
+      });
+
+      // Push the blob into Array
+      mediaRecorder.ondataavailable = function(e) {
+        chunks.push(e.data);
+      };
+
+      // Logic to send the recorded audio to Rails RecordingsController
+      mediaRecorder.onstop = function() {
+        const blob = new Blob(chunks, { type: 'audio/webm' });
+        const formData = new FormData();
+        formData.append('recording[audio]', blob);
+        formData.append('authenticity_token', csrfToken);
+
+        fetch('/recordings', {
+          method: 'POST',
+          body: formData
+        })
+        .then(function(response) {
+          if (response.ok) {
+            window.location.href = '/';
+          }
+        })
+
+        chunks = [];
+      };
+    });
+</script>
