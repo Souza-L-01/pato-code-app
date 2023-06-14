@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :tracks, only: %i[show]
   end
 
+  resources :recordings, only: [:new, :create]
+
   resources :lessons, only: %i[index show create] do
     resources :posts, only: %i[index show create]
   end

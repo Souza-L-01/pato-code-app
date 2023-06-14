@@ -99,6 +99,14 @@ ActiveRecord::Schema[7.0].define(version: 202306061332255) do
     t.index ["user_id"], name: "index_prompts_on_user_id"
   end
 
+  create_table "recordings", force: :cascade do |t|
+    t.binary "audio"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_recordings_on_user_id"
+  end
+
   create_table "started_lessons", force: :cascade do |t|
     t.boolean "status"
     t.bigint "lesson_id", null: false
@@ -138,6 +146,7 @@ ActiveRecord::Schema[7.0].define(version: 202306061332255) do
   add_foreign_key "posts", "lessons"
   add_foreign_key "posts", "users"
   add_foreign_key "prompts", "users"
+  add_foreign_key "recordings", "users"
   add_foreign_key "started_lessons", "lessons"
   add_foreign_key "started_lessons", "users"
   add_foreign_key "tracks", "languages"
