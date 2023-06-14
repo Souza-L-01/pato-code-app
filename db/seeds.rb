@@ -4,6 +4,7 @@ Language.destroy_all
 Track.destroy_all
 Lesson.destroy_all
 Prompt.destroy_all
+Recording.destroy_all
 User.destroy_all
 
 puts "Creating languages..."

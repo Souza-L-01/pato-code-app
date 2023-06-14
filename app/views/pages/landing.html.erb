@@ -1,24 +1,24 @@
 <div class="screen">
   <div class="d-flex justify-content-center align-items-center">
     <div class="menu" >
-    <%# <%= image_tag("patofix.png") %> 
-      <img src="http://www.patofix.nl/assets/patofix-e94520029c850af2dac964e939578ef792d3e2c444f9555dcf683e7558bc82f5.png" id="landing-img" >
+    <%= image_tag("patofix.png", id:"landing-img")  %>
+      <%# <img src="patofix.png" id="landing-img"> %>
       <%# <img src="patofix.png" alt="patofix_logo"> %>
     </div>
   </div>
   <ul class="icons" id="icons-center"> 
     <li class="icon">
       <figure>
-         <%= link_to "https://www.google.com" do %>
+         <%= link_to dashboard_path do %>
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABsWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMTEgNzkuMTU4MzI1LCAyMDE1LzA5LzEwLTAxOjEwOjIwICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE1IChNYWNpbnRvc2gpIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+lGNDgAAAAQ5JREFUeJztm8EOwiAQRB3j///yesL0orKkyyPZeVfUvkynlBhQRDx2IWnqYhGhapfBc9eFTuW14yLjzs+27fL58ia0b4Ayc8DsM0yTaU77BkzNAdlnmCYzh7RvgAOgBWhS6wBp2wJtG+0bsLQOOPVtMBrqdUACB0AL0JQEIOnnG6N6PEP7Btz6f8BlFkbGV2jfAAdAC9A4AFqAxgHQAjQOgBagcQC0AI0DoAVoHAAtQOMAaAEaB0AL0DgAWoDGAdACNA6AFqBxALQAjQOgBWgcAC1A4wBoARoHQAvQOABagObWXWJj99a33VzV4yu4ARU/+u/OVI9naN8AB0AL0KROjHy+dOgJ0pWzxu0b8AZuBl9+3sLF0wAAAABJRU5ErkJggg==" />
           <% end %>
           <figcaption>
-          Debbug
+          Debug
         </figcaption>
     </li>
     <li class="icon">
       <figure>
-          <%= link_to languages_path do %>
+          <%= link_to dashboard_path do %>
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABsWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMTEgNzkuMTU4MzI1LCAyMDE1LzA5LzEwLTAxOjEwOjIwICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE1IChNYWNpbnRvc2gpIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+lGNDgAAAAW9JREFUeJztmtEKwzAIRXXs/385e5kwAjJTjRpyz1MZrZV4ajtbHmPQDpjZFVjyYuaQfLT4ry3RD+IdFWiuuNcsqfxGQ4kIBvgNkMpHVWpX5bW4MODpgXPlo7u1N96cl2YUDIgK1L3ra1xvABagOoFqwnqA4O3eUd3fCgzYFXi1Et67wFNzrjcAC1CdQDVtF4CZt02Dfmm7AFlsuwv8I6O6FmBA9gm1+738njULxFT4CztWehD1uZatzJOi6w3wzASJSL+WrWZpBq3GfZoPDMg+4VxxbXqr7RcNDMg+obWSWdNhGOB9j6918afPB6vHeU2BAbKR/UbGS9QTKAyoTmDG+mQYxfUGYAGqE6gGC1CdQDVYgOoEqmn3HIBvhJIxGxA9/e3y3wMGWHfsUrFoYIB1x649wJsXDLDu2LUHYCbo5PgesMrPGygmggHn9wArc+UFGFCdgBdrb5orL8CA6gS8aJW1AgNk47SvvaK43oAPspqTs9gxJGsAAAAASUVORK5CYII=">
           <% end %>
           <figcaption>
@@ -28,7 +28,7 @@
     </li>
     <li class="icon">
       <figure>
-         <%= link_to languages_path do %>
+         <%= link_to dashboard_path do %>
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABsWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxMTEgNzkuMTU4MzI1LCAyMDE1LzA5LzEwLTAxOjEwOjIwICAgICAgICAiPgogPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIgogICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE1IChNYWNpbnRvc2gpIi8+CiA8L3JkZjpSREY+CjwveDp4bXBtZXRhPgo8P3hwYWNrZXQgZW5kPSJyIj8+lGNDgAAAAUVJREFUeJztmsEOxCAIRGWz///L7MmkaUIVVKDLvGuxmdhxpLbUnuHB9RCYmTT1RHL5Z1nNyxnNJLfWGnMOI9yf5KwT4IAHvtECLHRHElF3qCoTrsAB0QJW2OEEOCBawA5WnAAH7LyZtN9entDj+Nm6ifHTTijvgFd3gpqh0oXyDljKAOua1671Xq914sz9yzvgVRmg5eIAZIDEkQy4Y93ftf2DhfIOQAb4SMlLyj7AY+13yjsAGeAjJS+YgGgB0bicCHVOnQyhE1wAu4CPlLwcfRvcvealOmTAAsgAHyl52ZoBXmteqrNQ3gHIAB8peUnRB2jrdzqyvAOQAT5S8oIJiBYQTaoTodHb3michfIOwC7gIyUvoZ1ghm+E5R2ADPCRkpeQ/wOs9TgVPgAywEdKXjAB0QKiwQREC4hmahf4A7ALSPwAap/JhqfnycgAAAAASUVORK5CYII=" />
           <figcaption>
         <% end %>

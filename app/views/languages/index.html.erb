@@ -5,7 +5,7 @@
         <div class="d-flex flex-column align-items-center">
           <%= link_to image_tag("icons/#{language.name}.svg", size: '250x250', crop: :fill), language_path(language) %>
           <div class="align-self-center mb-2">
-            <h1><%= language.name %></h1>
+            <h1 id="lang-title"><%= language.name %></h1>
           </div>
         </div>
       </div>

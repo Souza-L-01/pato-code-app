@@ -1,3 +1,105 @@
+
+.btn-primary{
+  background: #FFD93D;
+  border: 2px solid #000000;
+  border-radius: 3px;
+  color: #000000;
+  box-shadow: 2px 4px 1px #000000;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 16px;
+  font-family: "ChicagoFLF", sans-serif;
+}
+
+.btn-primary:hover {
+  background: #f9e07c;  
+  border: 2px solid #000000;
+  box-shadow: 2px 4px 1px #000000;
+  border-radius: 3px;
+  color: #000000;
+
+}
+
+.btn-primary:active{
+  background: #dfc769;
+  border: 2px solid #000000;
+  box-shadow: 2px 1px 1px #000000;
+  border-radius: 3px;
+}
+
+.btn-secondary{
+  background: rgb(253, 242, 198);
+  border: 2px solid #000000;
+  border-radius: 3px;
+  color:#dcb000;
+  box-shadow: 2px 4px 1px #000000;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 16px;
+  font-family: "ChicagoFLF", sans-serif;
+  padding: 9px;
+}
+
+.btn-secondary:hover {
+  background: #f9e07c;  
+  border: 2px solid #000000;
+  box-shadow: 2px 4px 1px #000000;
+  border-radius: 3px;
+  color: #000000;
+}
+
+.btn-secondary:active{
+  background: #FFD93D;
+border: 2px solid #000000;
+box-shadow: 2px 1px 1px #000000;
+border-radius: 3px;
+}
+
+// .btn-secondary{
+//   background: rgba(255, 217, 61, 0.2);
+//   /* vibrant yellow */
+  
+//   border: 1px solid #FFD93D;
+//   border-radius: 3px;
+// }
+
+// .btn-secondary:hover {
+//   background: rgba(255, 217, 61, 0.2);
+//   /* vibrant yellow */
+  
+//   border: 1px solid #FFD93D;
+//   box-shadow: 2px 4px 1px #000000;
+//   border-radius: 3px;
+// }
+
+// .btn-secondary:active{
+//   background: rgba(255, 217, 61, 0.2);
+//   /* vibrant yellow */
+  
+//   border: 1px solid #FFD93D;
+//   box-shadow: 2px 1px 1px #000000;
+//   border-radius: 3px;
+// }
+
+// .btn-tertiary2{
+//   ackground: rgba(139, 24, 116, 0.1);
+//   border: 1px solid #8B1874;
+//   border-radius: 3px;
+// }
+
+// .btn-tertiary2{
+//   background: rgba(139, 24, 116, 0.1);
+// border: 1px solid #8B1874;
+// box-shadow: 2px 4px 1px #000000;
+// border-radius: 3px;
+// }
+
+// .btn-tertiary2:active{
+//   background: rgba(139, 24, 116, 0.1);
+// }
+
+
+
 .btn-tertiary {
   background: none;
   border: none;
