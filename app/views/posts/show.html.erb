@@ -21,13 +21,13 @@
             <p><strong>Posted by:</strong> <%= @post.user.username %></p>
             <div>
               <p class="text-secondary">
-                <% if @post.timestamp.present? %>
-                  <% if @post.timestamp.to_date == Date.today %>
-                    <%= "Today, #{@post.timestamp.strftime('%H:%M')}" %>
-                  <% elsif @post.timestamp.to_date == Date.yesterday %>
-                    <%= "Yesterday, #{@post.timestamp.strftime('%H:%M')}" %>
+                <% if @post.created_at.present? %>
+                  <% if @post.created_at.to_date == Date.today %>
+                    <%= "Today, #{@post.created_at.strftime('%H:%M')}" %>
+                  <% elsif @post.created_at.to_date == Date.yesterday %>
+                    <%= "Yesterday, #{@post.created_at.strftime('%H:%M')}" %>
                   <% else %>
-                    <%= @post.timestamp.strftime('%d-%m-%Y %H:%M') %>
+                    <%= @post.created_at.strftime('%d-%m-%Y %H:%M') %>
                   <% end %>
                 <% end %>
               </p>
@@ -53,13 +53,13 @@
               <p><strong>Posted by:</strong> <%= comment.user.username %></p>
               <div>
                 <p class="text-secondary">
-                  <% if comment.timestamp.present? %>
-                    <% if comment.timestamp.to_date == Date.today %>
-                      <%= "Today, #{comment.timestamp.strftime('%H:%M')}" %>
-                    <% elsif comment.timestamp.to_date == Date.yesterday %>
-                      <%= "Yesterday, #{comment.timestamp.strftime('%H:%M')}" %>
+                  <% if comment.created_at.present? %>
+                    <% if comment.created_at.to_date == Date.today %>
+                      <%= "Today, #{comment.created_at.strftime('%H:%M')}" %>
+                    <% elsif comment.created_at.to_date == Date.yesterday %>
+                      <%= "Yesterday, #{comment.created_at.strftime('%H:%M')}" %>
                     <% else %>
-                      <%= comment.timestamp.strftime('%d-%m-%Y %H:%M') %>
+                      <%= comment.created_at.strftime('%d-%m-%Y %H:%M') %>
                     <% end %>
                   <% end %>
                 </p>
@@ -81,7 +81,7 @@
           <p>Your Answer</p>
         </div>
       </div>
-      <div>
+      <div class="content">
         <%= simple_form_for [@post, @comment] do |f| %>
           <%= f.input :content, as: :text, input_html: { rows: 3 }, label: false %>
           <%= f.button :submit, class: 'btn btn-primary' %>
