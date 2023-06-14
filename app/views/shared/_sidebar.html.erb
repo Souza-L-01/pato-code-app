@@ -22,28 +22,28 @@
           </li>
 
           <li class="darkerli">
-            <%= link_to('/languages/19') do %>
+            <%= link_to(language_path(Language.find_by(name: 'Ruby'))) do %>
               <%= image_tag("ruby_img.png", alt: "ruby", class: "ruby-img") %>
               <span class="nav-text">Ruby</span>
             <% end %>
           </li>
 
           <li class="darkerli">
-            <%= link_to('/languages/18') do %>
+            <%= link_to(language_path(Language.find_by(name: 'JavaScript'))) do %>
               <%= image_tag("js_img.png", alt: "java-script", class: "js-img") %>
               <span class="nav-text">JavaScript</span>
             <% end %>
           </li>
 
           <li class="darkerli">
-            <%= link_to('/languages/21') do %>
+            <%= link_to(language_path(Language.find_by(name: 'HTML'))) do %>
               <%= image_tag("html_img.png", alt: "html", class: "html-img") %>
               <span class="nav-text">HTML</span>
             <% end %>
           </li>
 
           <li class="darkerli">
-            <%= link_to('/languages/20') do %>
+            <%= link_to(language_path(Language.find_by(name: 'CSS'))) do %>
               <%= image_tag("css_img.png", alt: "css", class: "css-img") %>
               <span class="nav-text">CSS</span>
             <% end %>
@@ -71,34 +71,13 @@
           </li>
 
           <li>
-            <%= link_to("#") do %>
-              <i class="fa fa-heart-o fa-xl"></i>
+            <%= link_to(new_recording_path) do %>
+              <%= image_tag("duckrec.png", alt: "duck", class: "duckrec-sidebar") %>
               <span class="nav-text">
-                <%# <div class="addthis_default_style addthis_32x32_style"> %>
-                  <%# <div style="position:absolute; margin-left: 56px; top:3px; text-decoration: none"> %>
-                    <%# <%= link_to(("#"), target: "_blank", class: "share-popup", style: "text-decoration: none") do %>
-                      <%= image_tag("https://icons.iconarchive.com/icons/colebemis/feather/72/github-icon.png", width: "20px", height: "20px") %>
-                    <%# <% end %>
-                    <%# <%= link_to(("#"), target: "_blank", class: "share-popup", style: "text-decoration: none" ) do %>
-                      <%= image_tag("https://icons.iconarchive.com/icons/iconsmind/outline/72/Facebook-2-icon.png", width: "20px", height: "20px") %>
-                    <%# <% end %>
-                    <%# <%= link_to(("#"), target: "_blank", class: "share-popup", style: "text-decoration: none") do %>
-                      <%= image_tag("https://icons.iconarchive.com/icons/custom-icon-design/mono-general-3/256/twitter-icon.png", width: "20px", height: "20px") %>
-                      <%# <% end %>
-                  <%# </div> %>
-                  <%# <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-                  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4ff17589278d8b3a"></script> %>
-                <%# </div> %>
+              Talk to the duck
               </span>
-
-              <%#= link_to ("#") do %>
-              <%# <span class="twitter"></span>
-              <span class="github"></span>
-              <span class="fb-like"></span> %>
-                <%# <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Ffacebook.com%2Fstartific&amp;width&amp;layout=button&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px;" allowTransparency="true"></iframe>%>
             <% end %>
           </li>
-
         </ul>
       </div>
     <% end %>
