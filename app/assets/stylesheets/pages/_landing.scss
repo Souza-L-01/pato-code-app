@@ -8,7 +8,7 @@
     // position: relative; 
     // object-fit: contain;
     // object-position: 10px 20%;
-    margin-top: 18%;
+    margin-top: 15%;
     max-width: 100%;
     height: auto;
     object-fit: cover;
@@ -53,7 +53,7 @@
   .icons figure {
     display: grid;
     width: 5rem;
-    height: 3em;
+    height: 4em;
     grid-template-rows: repeat(2, min-content);
     // place-items: center;
     // margin-top: 18%;
@@ -65,7 +65,7 @@
 
   .icons li {
     display: inline-block;
-    position: absolute;
+    position: fixed;
     bottom: 1.9em;
     right: 30rem;
     opacity: 0;

@@ -1,7 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
-  border-bottom: 2px black dashed;
+  background: rgb(242, 242, 242);
+  border-bottom: solid 2px rgb(0, 0, 0);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -20,4 +20,8 @@
 .nav-item {
   align-self: center;
   margin-right: 5px;
+}
+
+.pato-text {
+  padding: 0 2px;
 }
