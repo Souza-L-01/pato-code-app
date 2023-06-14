@@ -12,3 +12,6 @@ application.register("prompts", PromptsController)
 
 import LandingController from "./landing_controller"
 application.register("landing", LandingController)
+
+import ErrorController from "./error_controller"
+application.register("error", ErrorController)
