@@ -11,24 +11,23 @@ $body-font: $terminal-font, "Helvetica", "sans-serif";
 $headers-font: $chicago-font, "Helvetica", "sans-serif";
 
 @font-face {
-  font-family: $terminal-font;
-  src: url('/assets/fonts/terminal-grotesque-webfont.eot');
-  src: url('/assets/fonts/terminal-grotesque-webfont.eot?#iefix') format('embedded-opentype'),
-       url('/assets/fonts/terminal-grotesque-webfont.woff2') format('woff2'),
-       url('/assets/fonts/terminal-grotesque-webfont.woff') format('woff'),
-       url('/assets/fonts/terminal-grotesque-webfont.ttf') format('truetype'),
-       url('/assets/fonts/terminal-grotesque-webfont.svg#terminal_grotesqueregular') format('svg');
+  font-family: 'Terminal Grotesque';
+  src: font-url('terminal-grotesque-webfont.eot');
+  src: font-url('terminal-grotesque-webfont.eot?#iefix') format('embedded-opentype'),
+       font-url('terminal-grotesque-webfont.woff2') format('woff2'),
+       font-url('terminal-grotesque-webfont.woff') format('woff'),
+       font-url('terminal-grotesque-webfont.ttf') format('truetype'),
+       font-url('terminal-grotesque-webfont.svg#terminal_grotesqueregular') format('svg');
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
-  font-family: $chicago-font;
-  src: url("//db.onlinewebfonts.com/t/1a243397695904f6f56e490ffd77a9cb.eot");
-  src: url("//db.onlinewebfonts.com/t/1a243397695904f6f56e490ffd77a9cb.eot?#iefix") format("embedded-opentype"),
-  url("//db.onlinewebfonts.com/t/1a243397695904f6f56e490ffd77a9cb.woff2") format("woff2"),
-  url("//db.onlinewebfonts.com/t/1a243397695904f6f56e490ffd77a9cb.woff") format("woff"),
-  url("//db.onlinewebfonts.com/t/1a243397695904f6f56e490ffd77a9cb.ttf") format("truetype"),
-  url("//db.onlinewebfonts.com/t/1a243397695904f6f56e490ffd77a9cb.svg#ChicagoFLF") format("svg");
+  font-family: 'ChicagoFLF';
+  src: font-url('1a243397695904f6f56e490ffd77a9cb.eot');
+  src: font-url('1a243397695904f6f56e490ffd77a9cb.eot?#iefix') format('embedded-opentype'),
+       font-url('1a243397695904f6f56e490ffd77a9cb.woff2') format('woff2'),
+       font-url('1a243397695904f6f56e490ffd77a9cb.woff') format('woff'),
+       font-url('1a243397695904f6f56e490ffd77a9cb.ttf') format('truetype'),
+       font-url('1a243397695904f6f56e490ffd77a9cb.svg#ChicagoFLF') format('svg');
 }
