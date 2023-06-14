@@ -57,25 +57,25 @@
           </li>
 
           <li class="darkerli">
+            <%= link_to(new_recording_path) do %>
+              <%= image_tag("duckrec.png", alt: "duck", class: "duckrec-sidebar") %>
+              <span class="nav-text">
+              Talk to the duck
+              </span>
+            <% end %>
+          </li>
+
+          <li class="darkerli">
             <%= link_to("#") do %>
               <i class="fa fa-comments-o fa-xl"></i>
               <span class="nav-text">Community</span>
             <% end %>
           </li>
 
-          <li>
+          <li class="darkerli">
             <%= link_to("#") do %>
               <i class="fa fa-envelope-o fa-xl"></i>
               <span class="nav-text">Contact</span>
-            <% end %>
-          </li>
-
-          <li>
-            <%= link_to(new_recording_path) do %>
-              <%= image_tag("duckrec.png", alt: "duck", class: "duckrec-sidebar") %>
-              <span class="nav-text">
-              Talk to the duck
-              </span>
             <% end %>
           </li>
         </ul>

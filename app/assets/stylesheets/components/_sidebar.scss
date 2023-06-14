@@ -5,7 +5,7 @@
 #sidebar-body {
   padding: auto;
   font-family: "Terminal Grotesque", arial;
-  color: #fff;
+  color: rgb(242, 242, 242);
   font-weight: 300;
 }
 
@@ -71,7 +71,7 @@
 
 #style-1::-webkit-scrollbar {
   width: 5px;
-  background-color: #F7F7F7;
+  background-color: rgb(242, 242, 242);
 }
 
 #style-1::-webkit-scrollbar-thumb {
@@ -105,7 +105,7 @@ nav.main-menu.expanded {
 
 .main-menu {
   float: left;
-  background: #eae9e9;
+  background: rgb(239, 239, 239);
   top: 98px;
   bottom: 0;
   height: 87%;
@@ -118,7 +118,9 @@ nav.main-menu.expanded {
   transform: translateZ(0) scale(1, 1);
   box-shadow: 1px 0 15px rgba(0, 0, 0, 0.07);
   opacity: 1;
-  margin-top: 20px;
+  margin-top: 0px;
+  padding-top: 10px;
+
 }
 
 .main-menu>ul {
@@ -142,7 +144,7 @@ nav.main-menu.expanded {
   display: table;
   border-collapse: collapse;
   border-spacing: 0;
-  color: #8a8a8a;
+  color: #594f4f;
   font-size: 16px;
   text-decoration: none;
   -webkit-transform: translateZ(0) scale(1, 1);
@@ -216,7 +218,7 @@ settings:focus {
 a:hover,
 a:focus {
   text-decoration: none;
-  border-left: 0px solid #F7F7F7;
+  border-left: 0px solid #8e77e7;
 }
 
 nav {
@@ -238,7 +240,7 @@ nav li {
 /* Darker element side menu Start*/
 
 .darkerli {
-  background-color: #e8e6e6;
+  background-color: rgb(239, 239, 239);
   text-transform: capitalize;
   img {
     padding-left: 10px;
@@ -278,7 +280,7 @@ nav.main-menu li.active>a,
 .no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
 .dashboard-page nav.dashboard-menu ul li.active a {
   color: #fff;
-  background-color: rgb(190, 190, 190);
+  background-color: rgb(230, 158, 246);
   text-shadow: 0px 0px 0px;
 }
 
