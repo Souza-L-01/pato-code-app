@@ -115,19 +115,16 @@ border-radius: 3px;
   color: $red;
 }
 
-.nav-button, .nav-button:hover {
-  background-color: rgba(127, 17, 224, .1);
-  color: rgba(127, 17, 224, 1);
+.nav-button, .nav-button:hover, .nav-link, .nav-link:hover {
+  background-color: rgba(127, 17, 224, .1,);
+  color: #8B1874;
+  font-family: 'ChicagoFLF';
   text-decoration: none;
   padding: 8px;
-  border: 1px solid rgba(127, 17, 224, 1);
-  border-radius: 2px;
+  border: 2px solid #8B1874;
+  border-radius: 3px;
 }
 
 .navbar .nav-item {
   padding: 0 2px;
-}
-
-.record-button{
-
 }
