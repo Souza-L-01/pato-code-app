@@ -12,12 +12,12 @@ $headers-font: $chicago-font, "Helvetica", "sans-serif";
 
 @font-face {
   font-family: $terminal-font;
-  src: url('terminal-grotesque-webfont.eot');
-  src: url('terminal-grotesque-webfont.eot?#iefix') format('embedded-opentype'),
-       url('terminal-grotesque-webfont.woff2') format('woff2'),
-       url('terminal-grotesque-webfont.woff') format('woff'),
-       url('terminal-grotesque-webfont.ttf') format('truetype'),
-       url('terminal-grotesque-webfont.svg#terminal_grotesqueregular') format('svg');
+  src: url('/assets/fonts/terminal-grotesque-webfont.eot');
+  src: url('/assets/fonts/terminal-grotesque-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/terminal-grotesque-webfont.woff2') format('woff2'),
+       url('/assets/fonts/terminal-grotesque-webfont.woff') format('woff'),
+       url('/assets/fonts/terminal-grotesque-webfont.ttf') format('truetype'),
+       url('/assets/fonts/terminal-grotesque-webfont.svg#terminal_grotesqueregular') format('svg');
   font-weight: normal;
   font-style: normal;
 
