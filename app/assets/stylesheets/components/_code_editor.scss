@@ -1,0 +1,119 @@
+#body-code-editor {
+    background: rgb(25,25,25);
+    padding-top: 20px;
+  }
+  
+  .console-box {
+    width: 80%;
+    max-width: 920px;
+    max-height: 360px;
+    margin: 50px auto;
+    padding-left: 0; 
+    font-family: Monospace, sans-serif;
+    background: #404041;
+    border-radius: 5px;
+    overflow: auto;
+    counter-reset: codeline; 
+    -webkit-box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
+  }
+  
+  .console-box > li {
+    position: relative;
+    margin-left: 40px; 
+    padding: 1px 10px;
+    list-style: none;
+  }
+  
+  .console-box > li:before {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    top: 0;
+    left: -40px;
+    padding-top: 1px;
+    padding-right: 8px;
+    text-align: right;
+    background: #2e2e2f;
+    color: #59595b; 
+    content: counter(codeline);
+    counter-increment: codeline;
+  }
+  
+  .console-box > li:first-child {
+    padding-top: 16px;
+  }
+  
+  .console-box > li:first-child:before {
+    padding-top: 16px;
+  }
+  
+  .console-box > li:last-child {
+    padding-bottom: 16px;
+  }
+  
+  .console-box > li ul {
+    padding-left: 20px;
+  }
+  
+  .console-box > li ul li {
+    list-style: none;
+  }
+  
+  .console-box > li  pre {
+    margin: 0;
+  }
+  
+  /* Monokai color pattern */
+  .monokai-black {
+    color: #000000;
+  }
+  
+  .monokai-hardgrey {
+    color: #272822;
+  }
+  
+  .monokai-darkgrey {
+    color: #3B3A32;
+  }
+  
+  .monokai-grey {
+    color: #49483E;
+  }
+  
+  .monokai-lightgrey {
+    color: #90907C;
+  }
+  
+  .monokai-white {
+    color: #F5F5EC;
+  }
+  
+  .monokai-yellow {
+    color: #FFE792;
+  }
+  
+  .monokai-orange {
+    color: #FD971F;
+  }
+  
+  .monokai-red {
+    color: #F92672;
+  }
+  
+  .monokai-violet {
+    color: #AE81FF;
+  }
+  
+  .monokai-teal {
+    color: #66D9EF;
+  }
+  
+  .monokai-green {
+    color: #A6E22E;
+  }
+  

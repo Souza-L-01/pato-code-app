@@ -1,20 +1,24 @@
-<div class="d-flex justify-content-center" id="background-prompt">
+<div class="d-flex justify-content-evenly" id="background-prompt">
   <div class="window">
     <div class="bar">
       <i></i>
-      <div class="bar-name"><p data-controller="hello" >Tell me your bug</p></div>
+      <div>
+        <p data-controller="hello">Tell me your bug</p>
+      </div>
     </div>
     <div class="content" data-controller="prompts">
       <%= form_with(model: @prompt, url: generate_text_prompts_path, data: { target: "prompts.bugDescription" }) do |form| %>
         <%= form.text_area :question, id: "bug-description", class: "bug-textarea", placeholder: "Enter your bug description" %>
-        <%= form.button :submit, class: "submit-button", "data-action": "click->prompts#generateText" %>
+        <%= form.button :submit, class: "submit-button" %>
       <% end %>
     </div>
   </div>
   <div class="window">
     <div class="bar">
       <i></i>
-      <div><p>Read your debbing </p></div>
+      <div>
+        <p>Explanation</p>
+      </div>
     </div>
     <div class="content" data-controller="prompts">
       <%= simple_form_for @prompt, url: generate_text_prompts_path, html: { data: { target: 'prompts.bugDescription' } } do |form| %>
@@ -23,4 +27,80 @@
       <% end %>
     </div>
   </div>
+</div>
+
+<div id="body-code-editor">
+<ol class="console-box">
+  <li>
+    <span class="monokai-lightgrey">&lt;!-- Pato Fix --&gt;</span>
+  </li>
+  <li>
+    <span class="monokai-white">&lt;<span class="monokai-red">p</span>&gt;Common item&lt;/<span class="monokai-red">p</span>&gt;</span>
+  </li>
+  <li>
+    <span class="monokai-white">&lt;<span class="monokai-red">p</span>&gt;Common item&lt;/<span class="monokai-red">p</span>&gt;</span>
+  </li>
+  <li>
+    <span class="monokai-white">&lt;<span class="monokai-red">p</span> <span class="monokai-green">class</span>=<span class="monokai-yellow">"santa"</span>&gt;Santa Claus&lt;/<span class="monokai-red">p</span>&gt;</span>
+  </li>
+  <li>
+    <span>&nbsp;</span>
+  </li>
+  <li>
+    <span class="monokai-white">&lt;<span class="monokai-red">script</span>&gt;</span>
+  </li>
+  <li>
+    <ul>
+      <li>
+        <span class="monokai-white"><span class="monokai-teal">jQuery.fn</span>.<span class="monokai-green">exists</span> <span class="monokai-red">=</span> <span class="monokai-teal">function</span>(){</span>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>
+        <ul>
+          <li>
+            <span class="monokai-white"><span class="monokai-red">return</span> this.<span class="monokai-teal">length</span> <span class="monokai-red">></span> <span class="monokai-violet">0</span>;</span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>
+        <span class="monokai-white">}</span>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>
+        <span class="monokai-white"><span class="monokai-red">if</span> (<span class="monokai-red">$</span>(<span class="monokai-yellow">".santa"</span>).exists()){</span>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>
+        <ul>
+          <li>
+            <span class="monokai-white">console.<span class="monokai-teal">log</span>(<span class="monokai-yellow">"Santa exists!"</span>);</span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>
+        <span class="monokai-white">}</span>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <span class="monokai-white">&lt;/<span class="monokai-red">script</span>&gt;</span>
+  </li>
+</ol>
 </div>
