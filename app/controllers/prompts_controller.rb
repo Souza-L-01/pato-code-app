@@ -10,7 +10,10 @@ class PromptsController < ApplicationController
   def generate_text
     @prompt = Prompt.new(prompt_params)
     @prompt.user = current_user
-  
+
+    response = OpenaiService.new("#{prompt_params[:question]} - dont give the answer, explain me what's wrong, short concise words").call
+    @prompt.answer = response
+
     if @prompt.save
       redirect_to prompt_path(@prompt)
     else
