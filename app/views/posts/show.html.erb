@@ -1,22 +1,92 @@
-<h1><%= @post.title %></h1>
-<p><%= @post.content %></p>
-
-
-<% @post.comments.each do |comment| %>
-  <div>
-    <p><%= comment.content %></p>
-    <p><strong>Posted by:</strong> <%= comment.user.email %></p>
+<div class="d-flex justify-content-center align-items-center">
+  <div class="lines"></div>
+  <div class="title-wrapper px-4">
+    <h1 class="text-dark text-decoration-none">Community</h1>
   </div>
-<% end %>
-
-
-<% if user_signed_in? %>
-  <div>
-    <%= simple_form_for [@post, @comment] do |form| %>
-      <%= form.input :content, as: :text, input_html: { rows: 3 }, label: false %>
-      <%= form.button :submit, class: 'btn btn-primary' %>
-    <% end %>
+  <div class="lines"></div>
+</div>
+<div class="d-flex justify-content-center align-items-center">
+  <div id="background-prompt">
+    <div class="window">
+      <div class="bar">
+        <i></i>
+        <div>
+          <p><%= @post.title %></p>
+        </div>
+      </div>
+      <div>
+        <div class="content">
+          <div>
+            <p id="content-text"><%= @post.content %></p>
+            <p><strong>Posted by:</strong> <%= @post.user.username %></p>
+            <div>
+              <p class="text-secondary">
+                <% if @post.timestamp.present? %>
+                  <% if @post.timestamp.to_date == Date.today %>
+                    <%= "Today, #{@post.timestamp.strftime('%H:%M')}" %>
+                  <% elsif @post.timestamp.to_date == Date.yesterday %>
+                    <%= "Yesterday, #{@post.timestamp.strftime('%H:%M')}" %>
+                  <% else %>
+                    <%= @post.timestamp.strftime('%d-%m-%Y %H:%M') %>
+                  <% end %>
+                <% end %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-<% else %>
-  <p>Please sign in to add a comment.</p>
-<% end %>
+  <div id="background-prompt">
+    <div class="window">
+      <div class="bar">
+        <i></i>
+        <div>
+          <p>Answers</p>
+        </div>
+      </div>
+      <div>
+        <% @post.comments.each do |comment| %>
+          <div class="content">
+            <div>
+              <p><%= comment.content %></p>
+              <p><strong>Posted by:</strong> <%= comment.user.username %></p>
+              <div>
+                <p class="text-secondary">
+                  <% if comment.timestamp.present? %>
+                    <% if comment.timestamp.to_date == Date.today %>
+                      <%= "Today, #{comment.timestamp.strftime('%H:%M')}" %>
+                    <% elsif comment.timestamp.to_date == Date.yesterday %>
+                      <%= "Yesterday, #{comment.timestamp.strftime('%H:%M')}" %>
+                    <% else %>
+                      <%= comment.timestamp.strftime('%d-%m-%Y %H:%M') %>
+                    <% end %>
+                  <% end %>
+                </p>
+              </div>
+              <% if comment.user == current_user %>
+                <%= button_to "Delete", post_comment_path(@post, comment), method: :delete, remote: true, class: "btn-tertiary btn-ter-danger", data: { turbo_action: "remove" } %>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div id="background-prompt">
+    <div class="window">
+      <div class="bar">
+        <i></i>
+        <div>
+          <p>Your Answer</p>
+        </div>
+      </div>
+      <div>
+        <%= simple_form_for [@post, @comment] do |f| %>
+          <%= f.input :content, as: :text, input_html: { rows: 3 }, label: false %>
+          <%= f.button :submit, class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

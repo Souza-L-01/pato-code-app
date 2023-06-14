@@ -7,11 +7,12 @@ import { application } from "./application"
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
-import PromptsController from "./prompts_controller"
-application.register("prompts", PromptsController)
-
 import LandingController from "./landing_controller"
 application.register("landing", LandingController)
 
+import PromptsController from "./prompts_controller"
+application.register("prompts", PromptsController)
+
 import ErrorController from "./error_controller"
 application.register("error", ErrorController)
+
