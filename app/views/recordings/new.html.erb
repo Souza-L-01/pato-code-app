@@ -1,15 +1,18 @@
 <h1>New Recording</h1>
 <button id="record-button">Record</button>
 
+<div class="d-flex justify-content-center align-items-center">
+
 <% @recordings.each do |recording| %>
     <p>
-    <strong>Audio:</strong>
+    <strong class="lang-title">Your audio:</strong>
     <audio controls>
         <source src="<%= url_for(recording.audio) %>" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
     </p>
 <% end %>
+<div>
 
 <script>
   const recordButton = document.getElementById('record-button');
@@ -50,7 +53,7 @@
         })
         .then(function(response) {
           if (response.ok) {
-            window.location.href = '/';
+            window.location.href = 'https://www.patofix.nl/recordings/new';
           }
         })
 

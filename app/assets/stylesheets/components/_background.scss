@@ -8,6 +8,7 @@ ul.icons2 {
     background: repeating-conic-gradient(transparent 0% 25%, var(--square-color1) 0% 50%) 50% / calc(var(--square-size) * 2) calc(var(--square-size) * 2);
     background-color: var(--square-color2);
     margin-left: 0% ;
+    height: inherit;
   }
 
 div.screen2 {
