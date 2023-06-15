@@ -26,7 +26,7 @@ puts "Created languages"
 
 puts "Creating users"
 
-user1 = User.create!(email: "lunna@hotmail.com", username: "Lunna", password: "123456")
+user1 = User.create!(email: "lunna@hotmail.com", username: "Lucas", password: "123456")
 user2 = User.create!(email: "someone@hotmail.com", username: "Sjors", password: "123456")
 user3 = User.create!(email: "joop@hotmail.com", username: "Joop", password: "123456")
 user4 = User.create!(email: "hans@hotmail.com", username: "Hans", password: "123456")
