@@ -105,7 +105,7 @@ nav.main-menu.expanded {
 
 .main-menu {
   float: left;
-  background: rgb(239, 239, 239);
+  background: rgb(236, 236, 236);
   top: 98px;
   bottom: 0;
   height: 87%;
@@ -118,7 +118,7 @@ nav.main-menu.expanded {
   transform: translateZ(0) scale(1, 1);
   box-shadow: 1px 0 15px rgba(0, 0, 0, 0.07);
   opacity: 1;
-  margin-top: 0px;
+  margin-top: -5px;
   padding-top: 10px;
 
 }
@@ -198,7 +198,7 @@ nav.main-menu.expanded {
 /* Logo Hover Property */
 
 .settings:hover,
-settings:focus {
+.settings:focus {
   background: url(https://s17.postimg.org/74cl7s05b/logo_hover.jpg);
   -webkit-transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0;
   -moz-transition: all 0.2s ease-in-out, width 0, height 0, top 0, left 0;
@@ -219,22 +219,6 @@ a:hover,
 a:focus {
   text-decoration: none;
   border-left: 0px solid #8e77e7;
-}
-
-nav {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-
-nav ul,
-nav li {
-  outline: 0;
-  margin: 0;
-  padding: 0;
-  text-transform: capitalize;
 }
 
 /* Darker element side menu Start*/
