@@ -4,89 +4,93 @@
     <h1 class="text-dark text-decoration-none">Community</h1>
   </div>
   <div class="lines"></div>
-</div>
-<div class="d-flex justify-content-center align-items-center">
-  <div id="background-prompt">
-    <div class="window">
-      <div class="bar">
-        <i></i>
-        <div>
-          <p><%= @post.title %></p>
-        </div>
-      </div>
-      <div>
-        <div class="content">
+<div class="screen2">
+  <ul class="icons2">
+    </div>
+    <div class="d-flex justify-content-center align-items-center">
+      <div id="background-prompt">
+        <div class="window">
+          <div class="bar">
+            <i></i>
+            <div>
+              <p><%= @post.title %></p>
+            </div>
+          </div>
           <div>
-            <p id="content-text"><%= @post.content %></p>
-            <p><strong>Posted by:</strong> <%= @post.user.username %></p>
-            <div>
-              <p class="text-secondary">
-                <% if @post.created_at.present? %>
-                  <% if @post.created_at.to_date == Date.today %>
-                    <%= "Today, #{@post.created_at.strftime('%H:%M')}" %>
-                  <% elsif @post.created_at.to_date == Date.yesterday %>
-                    <%= "Yesterday, #{@post.created_at.strftime('%H:%M')}" %>
-                  <% else %>
-                    <%= @post.created_at.strftime('%d-%m-%Y %H:%M') %>
-                  <% end %>
-                <% end %>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="background-prompt">
-    <div class="window">
-      <div class="bar">
-        <i></i>
-        <div>
-          <p>Answers</p>
-        </div>
-      </div>
-      <div>
-        <% @post.comments.each do |comment| %>
-          <div class="content">
-            <div>
-              <p><%= comment.content %></p>
-              <p><strong>Posted by:</strong> <%= comment.user.username %></p>
+            <div class="content">
               <div>
-                <p class="text-secondary">
-                  <% if comment.created_at.present? %>
-                    <% if comment.created_at.to_date == Date.today %>
-                      <%= "Today, #{comment.created_at.strftime('%H:%M')}" %>
-                    <% elsif comment.created_at.to_date == Date.yesterday %>
-                      <%= "Yesterday, #{comment.created_at.strftime('%H:%M')}" %>
-                    <% else %>
-                      <%= comment.created_at.strftime('%d-%m-%Y %H:%M') %>
+                <p id="content-text"><%= @post.content %></p>
+                <p><strong>Posted by:</strong> <%= @post.user.username %></p>
+                <div>
+                  <p class="text-secondary">
+                    <% if @post.created_at.present? %>
+                      <% if @post.created_at.to_date == Date.today %>
+                        <%= "Today, #{@post.created_at.strftime('%H:%M')}" %>
+                      <% elsif @post.created_at.to_date == Date.yesterday %>
+                        <%= "Yesterday, #{@post.created_at.strftime('%H:%M')}" %>
+                      <% else %>
+                        <%= @post.created_at.strftime('%d-%m-%Y %H:%M') %>
+                      <% end %>
                     <% end %>
-                  <% end %>
-                </p>
+                  </p>
+                </div>
               </div>
-              <% if comment.user == current_user %>
-                <%= button_to "Delete", post_comment_path(@post, comment), method: :delete, remote: true, class: "btn-tertiary btn-ter-danger", data: { turbo_action: "remove" } %>
-              <% end %>
             </div>
           </div>
-        <% end %>
-      </div>
-    </div>
-  </div>
-  <div id="background-prompt">
-    <div class="window">
-      <div class="bar">
-        <i></i>
-        <div>
-          <p>Your Answer</p>
         </div>
       </div>
-      <div class="content">
-        <%= simple_form_for [@post, @comment] do |f| %>
-          <%= f.input :content, as: :text, input_html: { rows: 3 }, label: false %>
-          <%= f.button :submit, class: 'btn btn-primary' %>
-        <% end %>
+      <div id="background-prompt">
+        <div class="window">
+          <div class="bar">
+            <i></i>
+            <div>
+              <p>Answers</p>
+            </div>
+          </div>
+          <div>
+            <% @post.comments.each do |comment| %>
+              <div class="content">
+                <div>
+                  <p><%= comment.content %></p>
+                  <p><strong>Posted by:</strong> <%= comment.user.username %></p>
+                  <div>
+                    <p class="text-secondary">
+                      <% if comment.created_at.present? %>
+                        <% if comment.created_at.to_date == Date.today %>
+                          <%= "Today, #{comment.created_at.strftime('%H:%M')}" %>
+                        <% elsif comment.created_at.to_date == Date.yesterday %>
+                          <%= "Yesterday, #{comment.created_at.strftime('%H:%M')}" %>
+                        <% else %>
+                          <%= comment.created_at.strftime('%d-%m-%Y %H:%M') %>
+                        <% end %>
+                      <% end %>
+                    </p>
+                  </div>
+                  <% if comment.user == current_user %>
+                    <%= button_to "Delete", post_comment_path(@post, comment), method: :delete, remote: true, class: "btn-tertiary btn-ter-danger", data: { turbo_action: "remove" } %>
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div id="background-prompt">
+        <div class="window">
+          <div class="bar">
+            <i></i>
+            <div>
+              <p>Your Answer</p>
+            </div>
+          </div>
+          <div class="content">
+            <%= simple_form_for [@post, @comment] do |f| %>
+              <%= f.input :content, as: :text, input_html: { rows: 3 }, label: false %>
+              <%= f.button :submit, class: 'btn btn-primary' %>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </ul>
 </div>
