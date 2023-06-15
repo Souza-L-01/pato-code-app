@@ -12,8 +12,14 @@
     on <a href="https://codepen.io">CodePen</a>.
   </iframe>
 </div>
-<div>
+<div class="d-flex justify-content-between mt-4">
   <div>
-    <%= link_to "Are you stuck? Ask the community!", lesson_posts_path(lesson_id: @lesson.id) %>
+    <%= link_to "Are you stuck? Ask the community!", lesson_posts_path(lesson_id: @lesson.id), class: "text-dark" %>
   </div>
+  <div>
+    <%= link_to languages_path, class: "text-dark folder-wrapper" do %>
+      <strong>↵Back</strong>
+    <% end %>
+  </div>
+  <div class="filler"></div>
 </div>
