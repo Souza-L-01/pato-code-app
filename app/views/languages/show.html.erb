@@ -5,25 +5,24 @@
   </div>
   <div class="lines"></div>
 </div>
-
 <div class="screen2">
- <ul class="icons2">
-  <div class="d-flex flex-wrap justify-content-center">
-    <% @tracks.each do |track| %>
-      <div class="col-3 mb-4">
-        <%= link_to language_track_path(@language, track), class: 'link-dark' do %>
-          <div class="d-flex flex-column align-items-center">
-            <div>
-              <%= image_tag 'folder.svg' %>
+  <ul class="icons2">
+    <div class="d-flex flex-wrap justify-content-center">
+      <% @tracks.each do |track| %>
+        <div class="col-3 mb-4">
+          <%= link_to language_track_path(@language, track), class: 'link-dark' do %>
+            <div class="d-flex flex-column align-items-center">
+              <div>
+                <%= image_tag 'folder.svg' %>
+              </div>
+              <div class="folder-wrapper">
+                <p><%= track.title %></p>
+              </div>
             </div>
-            <div class="folder-wrapper">
-              <p><%= track.title %></p>
-            </div>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
-   </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </ul>
 </div>
 <div class="d-flex justify-content-center">
@@ -31,4 +30,3 @@
     <strong>↵Back</strong>
   <% end %>
 </div>
-
