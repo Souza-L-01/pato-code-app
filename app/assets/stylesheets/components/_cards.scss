@@ -9,6 +9,7 @@
   box-shadow: 5px 5px black;
   background-color: white;
   margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 .square-card-content {
@@ -20,4 +21,19 @@
   color: black;
   box-shadow: 0px 0px white;
   transform: translateX(5px) translateY(2px);
+}
+
+.folder-wrapper {
+  background-color: white;
+  height: 23px;
+  padding-inline: 5px;
+}
+
+.wrapper {
+  background-color: white;
+  padding: 5px;
+}
+
+.filler {
+  width: 228px;
 }
