@@ -105,7 +105,7 @@ nav.main-menu.expanded {
 
 .main-menu {
   float: left;
-  background: rgb(239, 239, 239);
+  background: rgb(236, 236, 236);
   top: 98px;
   bottom: 0;
   height: 87%;
@@ -118,7 +118,7 @@ nav.main-menu.expanded {
   transform: translateZ(0) scale(1, 1);
   box-shadow: 1px 0 15px rgba(0, 0, 0, 0.07);
   opacity: 1;
-  margin-top: 0px;
+  margin-top: -5px;
   padding-top: 10px;
 
 }
