@@ -31,16 +31,15 @@ user2 = User.create!(email: "someone@hotmail.com", username: "Sjors", password: 
 user3 = User.create!(email: "joop@hotmail.com", username: "Joop", password: "123456")
 user4 = User.create!(email: "hans@hotmail.com", username: "Hans", password: "123456")
 
+# users = [user1, user2, user3, user4]
 
-users = [user1, user2, user3, user4]
-
-users.each do |user|
-  unless user.avatar.attached?
-  default_avatar = "duck1ava.png"
-  file = File.open(File.join(__dir__, "icons/", default_avatar))
-  user1.avatar.attach(io: file, filename: default_avatar)
-  end
-end
+# users.each do |user|
+#   unless user.avatar.attached?
+#     default_avatar = "duck1ava.png"
+#     file = File.open(File.join(__dir__, "icons/", default_avatar))
+#     user1.avatar.attach(io: file, filename: default_avatar)
+#   end
+# end
 
 puts "Created #{user1.email}"
 puts "Created #{user2.email}"
@@ -295,8 +294,8 @@ puts "Lessons created"
 puts "\nCreating posts"
 
 post1 = Post.create!(
-  title: "I am crying right now :'(",
-  content: "I need help! I really don't get this exercise.",
+  title: "Flow of JavaScript idMaker generator",
+  content: "Hi there! Can somebody please explain the flow of the generator? I don't really understand what value is being passed to it and how it generates a response. Thank you!",
   user_id: user2.id,
   lesson_id: hard_lesson1.id,
   timestamp: Time.now.yesterday
@@ -315,7 +314,7 @@ puts "Posts created"
 puts "Creating comments"
 
 Comment.create!(
-  content: "If you give me some context I will try to help you out, mate!",
+  content: "Hi Sjors, the value getting passed to the generator is in this case an id, so an integer. What the number actually is, depends on your collection. The function takes the id of something in your collection, adds 1 to the integer and passes the value + done as an object through yield. It also 'remembers', where it was in your collection, for when the function gets called again. Hope this helps!",
   user_id: user4.id,
   post_id: post2.id,
   timestamp: Time.now
