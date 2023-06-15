@@ -128,31 +128,3 @@ border-radius: 3px;
 // .navbar .nav-item {
 //   padding: 0 2px;
 // }
-
-.nav-button, .nav-link{
-  background: #ff3df5;
-  border: 2px solid #000000;
-  border-radius: 3px;
-  color: #000000;
-  box-shadow: 2px 4px 1px #000000;
-  text-decoration: none;
-  font-weight: bolder;
-  font-size: 16px;
-  font-family: "ChicagoFLF", sans-serif;
-}
-
-.nav-button:hover, .nav-link:hover {
-  background: #26853a;  
-  border: 2px solid #000000;
-  box-shadow: 2px 4px 1px #000000;
-  border-radius: 3px;
-  color: #000000;
-
-}
-
-.nav-button:active, .nav-link:active{
-  background: #8cb407;
-  border: 2px solid #000000;
-  box-shadow: 2px 1px 1px #000000;
-  border-radius: 3px;
-}
