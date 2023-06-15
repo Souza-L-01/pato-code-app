@@ -1,8 +1,8 @@
 
-    <div class="lines"></div>
-        <div class="title-wrapper px-4">
-        <h1 class="lang-title2">New Recording</h1>
-        </div>
+<div class="lines"></div>
+  <div class="title-wrapper px-4">
+  <h1 class="lang-title2">New Recording</h1>
+</div>
       <button id="record-button" class="btn-primary">Record</button>
     <div class="lines"></div>
   <div class="screen2">
@@ -11,6 +11,7 @@
     <div class="d-flex flex-column-reverse bd-highlight">
       <% @recordings.each do |recording| %>
           <p>
+            <br>
           <strong class="lang-title">Your audio:</strong>
           <audio controls>
               <source src="<%= url_for(recording.audio) %>" type="audio/mp3">
