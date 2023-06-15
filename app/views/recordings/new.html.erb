@@ -1,28 +1,26 @@
 
 <div class="lines"></div>
   <div class="title-wrapper px-4">
-  <h1 class="lang-title2">New Recording</h1>
+  <h1 class="lang-title2">Your Recording</h1>
 </div>
-      <button id="record-button" class="btn-primary">Record</button>
-    <div class="lines"></div>
-  <div class="screen2">
-    <ul class="icons2">
-    <br>
-    <div class="d-flex flex-column-reverse bd-highlight">
+<div class="lines"></div>
+
+<div class="screen2">
+  <ul class="icons2">
+    <button id="record-button" class="btn-primary mt-5 ml-5" >Record</button>
+    <div class="d-flex flex-column-reverse bd-highlight p-3">
       <% @recordings.each do |recording| %>
-          <p>
-            <br>
-          <strong class="lang-title">Your audio:</strong>
-          <audio controls>
-              <source src="<%= url_for(recording.audio) %>" type="audio/mp3">
-              Your browser does not support the audio element.
-          </audio>
-          </p>
+        <p class="lang-title3">Your audio recorded on: <%= recording.created_at.strftime("%A, %B %d, %Y %I:%M %p") %></p>
+        <audio controls>
+            <source src="<%= url_for(recording.audio) %>" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <br>
       <% end %>
-      <div>
-    </ul>
     <div>
+  </ul>
 </div>
+
 <script>
   const recordButton = document.getElementById('record-button');
   const csrfToken = document.querySelector('meta[name="csrf-token"]').content;

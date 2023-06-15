@@ -58,28 +58,32 @@
     // place-items: center;
     // margin-top: 18%;
     max-width: 100%;
-    // height: auto;
+    height: auto;
     object-position: center;
     z-index: -1;
   }
 
   .icons li {
+    object-fit: cover;
+    object-position: center;
     display: inline-block;
     position: fixed;
     bottom: 1.9em;
-    right: 30rem;
+    right: 65rem;
+    height: 9.5rem;
     opacity: 0;
     animation: 1s launch-icons 1s linear forwards;
+    align-content: center;
   }
   ul.icons li:nth-of-type(2) {
-    right: 37rem;
+    right: 72rem;
   }
   ul.icons li:nth-of-type(3) {
-    right: 45rem;
+    right: 79rem;
   }
-  // .icons li:active {
-  //   filter: invert(1);
-  // }
+  .icons li:active {
+    filter: invert(1);
+  }
 
   .icons figure figcaption {
     background-color: white;
