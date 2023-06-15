@@ -9,7 +9,7 @@
   <div class="row row-cols-3" id="background-prompt">
     <% @lesson.posts.each do |post| %>
       <div class="col mx-5">
-        <div class="window">
+        <div class="community-window">
           <div class="bar">
             <i></i>
             <div>
@@ -20,18 +20,22 @@
             <%= link_to lesson_post_path(@lesson, post), class: "text-decoration-none" do %>
               <h6 class="text-dark"><%= post.title %></h6>
               <p class="text-dark"><%= post.content %></p>
-              <p><strong>Posted by:</strong> <%= post.user.username %></p>
-              <div class="d-flex justify-content-between">
-                <p class="text-secondary">
-                  <% if post.created_at.to_date == Date.today %>
-                    <%= "Today, #{post.created_at.strftime('%H:%M')}" %>
-                  <% elsif post.created_at.to_date == Date.yesterday %>
-                    <%= "Yesterday, #{post.created_at.strftime('%H:%M')}" %>
-                  <% else %>
-                    <%= post.created_at.strftime('%d-%m-%Y %H:%M') %>
-                  <% end %>
-                </p>
-                <button class="btn btn-primary">Contribute</button>
+              <div class="d-flex flex-column justify-content-between">
+                <div class="negative-margin">
+                  <p class="text-dark"><strong>Posted by:</strong> <%= post.user.username %></p>
+                </div>
+                <div>
+                  <p class="text-secondary">
+                    <% if post.created_at.to_date == Date.today %>
+                      <%= "Today, #{post.created_at.strftime('%H:%M')}" %>
+                    <% elsif post.created_at.to_date == Date.yesterday %>
+                      <%= "Yesterday, #{post.created_at.strftime('%H:%M')}" %>
+                    <% else %>
+                      <%= post.created_at.strftime('%d-%m-%Y %H:%M') %>
+                    <% end %>
+                  </p>
+                  <button class="btn btn-primary">Contribute</button>
+                </div>
               </div>
             <% end %>
           </div>
@@ -40,7 +44,7 @@
     <% end %>
   </div>
   <div id="background-prompt">
-    <div class="window">
+    <div class="community-window">
       <div class="bar">
         <i></i>
         <div>
@@ -57,4 +61,9 @@
       </div>
     </div>
   </div>
+</div>
+<div class="d-flex justify-content-center">
+  <%= link_to lesson_path(@lesson), class: "text-dark folder-wrapper" do %>
+    <strong>↵Back to lesson</strong>
+  <% end %>
 </div>

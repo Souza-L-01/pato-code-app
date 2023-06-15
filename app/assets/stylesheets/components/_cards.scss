@@ -35,5 +35,20 @@
 }
 
 .filler {
-  width: 228px;
+  width: 315px;
+}
+
+.negative-margin {
+  margin-bottom: -17px;
+}
+
+.progress-done {
+  height: 8px;
+  width: 8px;
+  color: $turq;
+}
+
+.progress-undone {
+  height: 8px;
+  color: $turq;
 }

@@ -74,6 +74,16 @@
   resize: vertical;
 }
 
+.community-window {
+  margin-top: 20em;
+  margin-left: 10em;
+  width: 200em;
+  height: auto;
+  background: white;
+  border: 1em solid black;
+  box-shadow: 1em 1em 0 0 black;
+}
+
 /* Responsive adjustments */
 
 @media (max-width: 768px) {

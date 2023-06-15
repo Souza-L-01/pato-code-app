@@ -16,11 +16,11 @@
     </div>
     <div class="d-flex justify-content-between mt-4">
       <div>
-        <%= link_to "Are you stuck? Ask the community!", lesson_posts_path(lesson_id: @lesson.id), class: "btn-primary" %>
+        <%= link_to "Are you stuck? Ask the community!", lesson_posts_path(lesson_id: @lesson.id), class: "btn btn-primary" %>
       </div>
       <div>
-        <%= link_to languages_path, class: "text-dark folder-wrapper" do %>
-          <strong>↵Back</strong>
+        <%= link_to language_track_path(@lesson.track.language, @lesson.track), class: "text-dark folder-wrapper" do %>
+          <strong>↵Back to lessons overview</strong>
         <% end %>
       </div>
       <div class="filler"></div>
