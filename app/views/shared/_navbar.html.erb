@@ -14,11 +14,13 @@
         <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <a href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <% if current_user.avatar.attached? %>
-                <%= cl_image_tag(current_user.avatar.key, class: "avatar", alt: "dropdown menu") %>
-              <% else %>
-                <%= image_tag("duck1ava.png", class: "avatar-bordered", alt: "dropdown menu") %>
-              <% end %>
+              <%= image_tag("duck1ava.png", class: "avatar", alt: "dropdown menu") %>
+              <%# <% if current_user.avatar.attached? %>
+                <%# <%= cl_image_tag(current_user.avatar.key, class: "avatar", alt: "dropdown menu") %>
+                <%# <%= image_tag("duck1ava.png", class: "avatar", alt: "dropdown menu") %> 
+              <%# <% else %> 
+                <%# <%= image_tag("duck1ava.png", class: "avatar-bordered", alt: "dropdown menu") %> 
+              <%# <% end %>  
             </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Profile", "#", class: "dropdown-item" %>
