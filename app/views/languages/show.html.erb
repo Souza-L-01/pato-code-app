@@ -1,23 +1,34 @@
 <div class="d-flex justify-content-center align-items-center">
   <div class="lines"></div>
   <div class="title-wrapper px-4">
-    <h1 id="lang-title"><%= @language.name%></h1>
+    <h1><%= @language.name %></h1>
   </div>
   <div class="lines"></div>
 </div>
-<div class="d-flex flex-wrap justify-content-center">
-  <% @tracks.each do |track| %>
-    <div class="col-3 mb-4" >
-      <%= link_to language_track_path(@language, track), class: 'link-dark' do %>
-        <div class="d-flex flex-column align-items-center">
-          <div>
-            <%= image_tag 'folder.svg' %>
+
+<div class="screen2">
+ <ul class="icons2">
+  <div class="d-flex flex-wrap justify-content-center">
+    <% @tracks.each do |track| %>
+      <div class="col-3 mb-4">
+        <%= link_to language_track_path(@language, track), class: 'link-dark' do %>
+          <div class="d-flex flex-column align-items-center">
+            <div>
+              <%= image_tag 'folder.svg' %>
+            </div>
+            <div class="folder-wrapper">
+              <p><%= track.title %></p>
+            </div>
           </div>
-          <div class="lang-title">
-            <p ><%= track.title %></p>
-          </div>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
+    <% end %>
+   </div>
+  </ul>
+</div>
+<div class="d-flex justify-content-center">
+  <%= link_to languages_path, class: "mb-4 text-dark folder-wrapper" do %>
+    <strong>↵Back</strong>
   <% end %>
 </div>
+

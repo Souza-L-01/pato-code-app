@@ -1,5 +1,3 @@
-
-
 ul.icons2 {
     list-style-type: none;
       --square-size: 3px;
@@ -8,6 +6,7 @@ ul.icons2 {
     background: repeating-conic-gradient(transparent 0% 25%, var(--square-color1) 0% 50%) 50% / calc(var(--square-size) * 2) calc(var(--square-size) * 2);
     background-color: var(--square-color2);
     margin-left: 0% ;
+    height: inherit;
   }
 
 div.screen2 {
@@ -24,3 +23,29 @@ div.screen2 {
 div.screen2 > * {
   mix-blend-mode: screen;
 }
+
+ul.icons3 {
+  list-style-type: none;
+    --square-size: 3px;
+  --square-color1: black;
+  --square-color2: white;
+  background: repeating-conic-gradient(transparent 0% 25%, var(--square-color1) 0% 50%) 50% / calc(var(--square-size) * 2) calc(var(--square-size) * 2);
+  background-color: var(--square-color2);
+  margin-left: 0% ;
+}
+
+div.screen3 {
+grid-row: 2 / 3;
+grid-column: 2 / 3;
+display: grid;
+grid-template-rows: auto 1fr;
+height: 100vh; /* Use viewport height to fill the screen */
+margin-left: auto;
+overflow: auto;
+animation: 1s launch-height 0s linear forwards;
+}
+
+div.screen3 > * {
+mix-blend-mode: screen;
+}
+

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url('//db.onlinewebfonts.com/c/1a243397695904f6f56e490ffd77a9cb?family=ChicagoFLF');
 
-$terminal-font: "Terminal Grotesque"!important;
+$terminal-font: "Terminal Grotesque";
 $chicago-font: "ChicagoFLF";
 // Define fonts for body and headers
 // $body-font: "Work Sans", "Helvetica", "sans-serif";
@@ -12,7 +12,7 @@ $headers-font: $chicago-font, "Helvetica", "sans-serif";
 
 @font-face {
   font-family: 'Terminal Grotesque';
-  src: font-url('terminal-grotesque-webfont.eot');
+  src: font-url('terminal-grotesque_open.otf');
   src: font-url('terminal-grotesque-webfont.eot?#iefix') format('embedded-opentype'),
        font-url('terminal-grotesque-webfont.woff2') format('woff2'),
        font-url('terminal-grotesque-webfont.woff') format('woff'),
