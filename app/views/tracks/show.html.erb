@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-center align-items-center">
+<div class="d-flex justify-content-center align-items-center bg-white">
   <div class="lines"></div>
   <div class="title-wrapper px-4">
     <h1 class="text-dark text-decoration-none"><%= @track.title %></h1>
@@ -36,7 +36,7 @@
       <% end %>
     </div>
     <div class="d-flex justify-content-center">
-      <%= link_to language_path(@language), class: "mb-4 text-dark folder-wrapper" do %>
+      <%= link_to language_path(@language), class: "text-dark folder-wrapper" do %>
         <strong>↵Back to tracks</strong>
       <% end %>
     </div>
