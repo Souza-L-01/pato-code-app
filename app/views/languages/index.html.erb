@@ -1,14 +1,18 @@
-<div class="d-flex justify-content-center">
-  <div class="row">
-    <% @languages.each do |language| %>
-      <div class="col-md-6 col-lg-5 mb-4">
-        <div class="d-flex flex-column align-items-center">
-          <%= link_to image_tag("icons/#{language.name}.svg", size: '250x250', crop: :fill), language_path(language) %>
-          <div class="align-self-center mb-2">
-            <h1 id="lang-title"><%= language.name %></h1>
+<div class="screen2">
+  <ul class="icons2">
+    <div class="d-flex justify-content-center">
+      <div class="row">
+        <% @languages.each do |language| %>
+          <div class="col-md-6 col-lg-5 mb-4">
+            <div class="d-flex flex-column align-items-center">
+              <%= link_to image_tag("icons/#{language.name}.svg", size: '250x250', crop: :fill), language_path(language) %>
+              <div class="align-self-center mb-2">
+                <h1 id="lang-title"><%= language.name %></h1>
+              </div>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
-    <% end %>
-  </div>
+    </div>
+  </ul>
 </div>
