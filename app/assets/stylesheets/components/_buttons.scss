@@ -17,17 +17,16 @@
   box-shadow: 2px 4px 1px #000000;
   border-radius: 3px;
   color: #000000;
-
 }
 
-.btn-primary:active{
+.btn-primary:active {
   background: #dfc769;
   border: 2px solid #000000;
   box-shadow: 2px 1px 1px #000000;
   border-radius: 3px;
 }
 
-.btn-secondary{
+.btn-secondary {
   background: rgb(253, 242, 198);
   border: 2px solid #000000;
   border-radius: 3px;
@@ -48,11 +47,11 @@
   color: #000000;
 }
 
-.btn-secondary:active{
+.btn-secondary:active {
   background: #FFD93D;
-border: 2px solid #000000;
-box-shadow: 2px 1px 1px #000000;
-border-radius: 3px;
+  border: 2px solid #000000;
+  box-shadow: 2px 1px 1px #000000;
+  border-radius: 3px;
 }
 
 // .btn-secondary{
@@ -98,8 +97,6 @@ border-radius: 3px;
 //   background: rgba(139, 24, 116, 0.1);
 // }
 
-
-
 .btn-tertiary {
   background: none;
   border: none;
@@ -115,16 +112,44 @@ border-radius: 3px;
   color: $red;
 }
 
-.nav-button, .nav-button:hover, .nav-link, .nav-link:hover {
-  background-color: rgba(127, 17, 224, .1,);
-  color: #8B1874;
-  font-family: 'ChicagoFLF';
-  text-decoration: none;
-  padding: 8px;
-  border: 2px solid #8B1874;
-  border-radius: 3px;
-}
+// .nav-button, .nav-link, .nav-button:hover, .nav-link:hover {
+//   background-color: rgba(127, 17, 224, .1,);
+//   color: #8B1874;
+//   font-family: 'ChicagoFLF';
+//   text-decoration: none;
+//   padding: 8px;
+//   border: 2px solid #8B1874;
+//   border-radius: 3px;
+// }
 
 .navbar .nav-item {
   padding: 0 2px;
+}
+
+
+.nav-button, .nav-link {
+  font-family: "ChicagoFLF", sans-serif;
+  background-color: rgba(127, 17, 224, .1,);
+  border: 2px solid #8B1874;
+  border-radius: 3px;
+  color: #8B1874;
+  box-shadow: 2px 4px 1px #8B1874;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.nav-button:hover, .nav-link:hover {
+  background: #8B1874;  
+  border: 2px solid #000000;
+  box-shadow: 2px 4px 1px #000000;
+  border-radius: 3px;
+  color: white;
+}
+
+.nav-button:active, .nav-link:active{
+  background: #8B1874;
+  border: 2px solid #000000;
+  box-shadow: 2px 1px 1px #000000;
+  border-radius: 3px;
 }
