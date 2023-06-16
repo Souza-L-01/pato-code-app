@@ -7,7 +7,7 @@
 </div>
 <div class="screen2">
   <ul class="icons2">
-    <div class="mt-5">
+    <div class="mt-5 mx-5">
       <iframe height="400" style="width: 100%;" scrolling="no" title="[ NUTSHELL ] - ES6 Generators and Iterators" src="https://codepen.io/ppozniak95/embed/yXgoxp?default-tab=html%2Cresult&editable=true" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
         See the Pen <a href="https://codepen.io/ppozniak95/pen/yXgoxp">
           [ NUTSHELL ] - ES6 Generators and Iterators</a> by Patryk Poźniak (<a href="https://codepen.io/ppozniak95">@ppozniak95</a>)
@@ -18,7 +18,7 @@
       <div id="btn-margin">
         <%= link_to "Are you stuck? Ask the community!", lesson_posts_path(lesson_id: @lesson.id), class: "btn btn-primary" %>
       </div>
-      <div>
+      <div class="back-btn-margin">
         <%= link_to language_track_path(@lesson.track.language, @lesson.track), class: "text-dark folder-wrapper p-2" do %>
           <strong>↵Back to lessons overview</strong>
         <% end %>
