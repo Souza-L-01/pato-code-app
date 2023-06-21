@@ -1,4 +1,6 @@
 class PromptsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[show new generate_text]
+
   def show
     @prompt = Prompt.find(params[:id])
   end

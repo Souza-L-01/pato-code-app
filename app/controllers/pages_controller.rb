@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:landing]
-  layout 'landing', only: [:landing]
+  skip_before_action :authenticate_user!, only: %i[landing dashboard],
+  layout 'landing', only: %i[landing dashboard ]
   
 
   def landing
