@@ -69,17 +69,17 @@
     display: inline-block;
     position: fixed;
     bottom: 1.9em;
-    right: 65rem;
-    height: 9.5rem;
+    right: 60rem;
+    height: 6.5rem;
     opacity: 0;
     animation: 1s launch-icons 1s linear forwards;
     align-content: center;
   }
   ul.icons li:nth-of-type(2) {
-    right: 72rem;
+    right: 67rem;
   }
   ul.icons li:nth-of-type(3) {
-    right: 79rem;
+    right: 74rem;
   }
   .icons li:active {
     filter: invert(1);
