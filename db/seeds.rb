@@ -316,7 +316,7 @@ puts "Creating comments"
 Comment.create!(
   content: "Hi Sjors, the value getting passed to the generator is in this case an id, so an integer. What the number actually is, depends on your collection. The function takes the id of something in your collection, adds 1 to the integer and passes the value + done as an object through yield. It also 'remembers', where it was in your collection, for when the function gets called again. Hope this helps!",
   user_id: user4.id,
-  post_id: post2.id,
+  post_id: post1.id,
   timestamp: Time.now
 )
 
